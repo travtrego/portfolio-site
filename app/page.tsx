@@ -11,7 +11,7 @@ export default function Home() {
         <p className="mt-3 max-w-xl text-lg text-[var(--muted)]">{site.tagline}</p>
       </section>
 
-      <section className="mt-8 grid grid-cols-2 gap-4 sm:grid-cols-3">
+      <section className="mt-8 grid grid-cols-2 gap-4 sm:grid-cols-4">
         {site.photos.map((photo) => (
           <div
             key={photo.src}
