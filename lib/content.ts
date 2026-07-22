@@ -14,10 +14,10 @@ export const site = {
   name: "Travis Sherman Trego",
   tagline: "Building things with AI, data, and code — one project at a time.",
   about: [
-    "In an effort to upskill within the accounting field, I fell into the AI rabbit hole — a few training modules turned into Python tutorials, and Python tutorials turned into building things I had no business building. Here we are. This site is that sandbox: hobby apps, data analytics projects I'm still figuring out, and a few productivity experiments aimed at making an accountant's life less painful. Call it upskilling with a sense of humor.",
+    "I work in accounting. A few required training modules on AI turned into a real interest in Python and building things. This site is where that interest turns into actual projects — hobby apps, data analytics I'm still learning, and tools aimed at making accounting work less painful.",
   ],
   bio: [
-    "Navy veteran, Electronic Warfare Operator, deployed across the Middle East and North Africa. I'm still working through the scars that came home with me — building things, one project at a time, is part of how I find my way back.",
+    "Navy veteran, Electronic Warfare Operator, deployed across the Middle East and North Africa. Still dealing with the PTSD that came home with me. Building things is one of the ways I manage it.",
   ],
   photos: [
     { src: "/photos/wedding-kiss.jpg", alt: "Wedding day" },
