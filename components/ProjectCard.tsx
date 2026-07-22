@@ -38,8 +38,8 @@ export default function ProjectCard({ project, accent }: { project: Project; acc
               href={project.demo}
               target="_blank"
               rel="noopener noreferrer"
-              className="rounded-full px-3 py-1 text-xs font-bold text-white shadow-sm transition-transform hover:-translate-y-0.5"
-              style={{ backgroundColor: accent }}
+              className="rounded-full px-3 py-1 text-xs font-bold shadow-sm transition-transform hover:-translate-y-0.5"
+              style={{ backgroundColor: accent, color: "var(--on-accent)" }}
             >
               Live demo ↗
             </a>
@@ -62,8 +62,8 @@ export default function ProjectCard({ project, accent }: { project: Project; acc
           {project.tags.map((tag) => (
             <span
               key={tag}
-              className="rounded-full px-2 py-0.5 text-xs font-medium"
-              style={{ color: accent, backgroundColor: `color-mix(in srgb, ${accent} 15%, transparent)` }}
+              className="rounded-full px-2 py-0.5 text-xs font-semibold"
+              style={{ backgroundColor: accent, color: "var(--on-accent)" }}
             >
               {tag}
             </span>

@@ -11,6 +11,8 @@
   --accent-productivity: #34d399;
   --card: #12151c;
   --border: #232733;
+  /* text color to use on top of a solid accent-colored fill (button/chip/pill) */
+  --on-accent: #0b0d12;
 }
 
 @media (prefers-color-scheme: light) {
@@ -20,11 +22,13 @@
     --muted: #5a6172;
     --accent: #1f6fb4;
     --accent-apps: #3b6fe0;
-    --accent-fun: #d9820b;
+    /* darkened from #d9820b / #059669 so white text on these meets 4.5:1 contrast */
+    --accent-fun: #a85c00;
     --accent-data: #9333ea;
-    --accent-productivity: #059669;
+    --accent-productivity: #04795a;
     --card: #fffefb;
     --border: #e3e6ec;
+    --on-accent: #ffffff;
   }
 }
 
@@ -55,8 +59,10 @@ h3 {
   letter-spacing: -0.01em;
 }
 
-a {
-  color: inherit;
+@layer base {
+  a {
+    color: inherit;
+  }
 }
 
 .project-card {

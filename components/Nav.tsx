@@ -23,11 +23,7 @@ export default function Nav() {
             <Link
               key={link.href}
               href={link.href}
-              style={
-                active
-                  ? { backgroundColor: `color-mix(in srgb, ${link.accent} 16%, transparent)`, color: link.accent }
-                  : undefined
-              }
+              style={active ? { backgroundColor: link.accent, color: "var(--on-accent)" } : undefined}
               className={`rounded-full px-3 py-1.5 text-sm font-bold transition-colors ${
                 active ? "" : "text-[var(--muted)] hover:text-[var(--foreground)]"
               }`}
