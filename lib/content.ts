@@ -59,9 +59,7 @@ export const dataProjects: Project[] = [
     href: "https://github.com/travtrego/digit-recognizer",
     tags: ["Python", "TensorFlow / Keras", "Image classification", "Neural networks / CNNs"],
     images: [
-      { src: "/projects/digit-recognizer/sample-digits.png", alt: "Sample training digits" },
       { src: "/projects/digit-recognizer/training-curves.png", alt: "Training accuracy and loss curves" },
-      { src: "/projects/digit-recognizer/confusion-matrix.png", alt: "Confusion matrix" },
       { src: "/projects/digit-recognizer/misclassified.png", alt: "Misclassified test digits" },
     ],
     improvements: [
