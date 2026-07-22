@@ -4,6 +4,7 @@ export type Project = {
   href?: string;
   tags?: string[];
   improvements?: string[];
+  nextSteps?: string[];
   comingSoon?: boolean;
   images?: { src: string; alt: string }[];
 };
@@ -62,11 +63,9 @@ export const dataProjects: Project[] = [
       { src: "/projects/digit-recognizer/training-curves.png", alt: "Training accuracy and loss curves" },
       { src: "/projects/digit-recognizer/misclassified.png", alt: "Misclassified test digits" },
     ],
-    improvements: [
-      "No data augmentation on the deeper models (only tried on the first)",
-      "No formal hyperparameter tuning — architecture changes were manual/iterative",
-      "No cross-validation, just a single train/val split",
-      "Doesn't generalize beyond clean/centered digit images",
+    nextSteps: [
+      "Build an interactive demo — draw a digit, get a live prediction",
+      "Test it against messier real-world handwriting, not just clean/centered MNIST digits",
     ],
   },
 ];

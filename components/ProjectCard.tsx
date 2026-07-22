@@ -48,6 +48,16 @@ export default function ProjectCard({ project, accent }: { project: Project; acc
           </ul>
         </div>
       )}
+      {project.nextSteps && project.nextSteps.length > 0 && (
+        <div className="mt-4">
+          <p className="text-xs font-medium uppercase tracking-wide text-[var(--muted)]">What&apos;s next</p>
+          <ul className="mt-2 list-inside list-disc space-y-1 text-sm text-[var(--muted)]">
+            {project.nextSteps.map((item) => (
+              <li key={item}>{item}</li>
+            ))}
+          </ul>
+        </div>
+      )}
     </>
   );
 
