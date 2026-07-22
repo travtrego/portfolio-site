@@ -40,10 +40,8 @@ body {
 
 body {
   background:
-    radial-gradient(900px circle at 8% -8%, color-mix(in srgb, var(--accent-apps) 16%, transparent), transparent 60%),
-    radial-gradient(800px circle at 92% 4%, color-mix(in srgb, var(--accent-fun) 18%, transparent), transparent 55%),
-    radial-gradient(900px circle at 15% 70%, color-mix(in srgb, var(--accent-productivity) 12%, transparent), transparent 55%),
-    radial-gradient(900px circle at 100% 100%, color-mix(in srgb, var(--accent-data) 14%, transparent), transparent 55%),
+    radial-gradient(1100px circle at 12% -10%, color-mix(in srgb, var(--accent-apps) 22%, transparent), transparent 60%),
+    radial-gradient(1000px circle at 100% 100%, color-mix(in srgb, var(--accent) 16%, transparent), transparent 60%),
     var(--background);
   background-attachment: fixed;
   color: var(--foreground);
