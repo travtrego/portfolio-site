@@ -7,6 +7,7 @@ export default function DataProjectsPage() {
       title="Data Projects"
       description="Data analytics projects — still learning, still building."
       projects={dataProjects}
+      accent="var(--accent-data)"
     />
   );
 }

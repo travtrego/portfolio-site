@@ -7,6 +7,7 @@ export default function AppsPage() {
       title="Apps"
       description="Apps I've built for fun."
       projects={apps}
+      accent="var(--accent-apps)"
     />
   );
 }

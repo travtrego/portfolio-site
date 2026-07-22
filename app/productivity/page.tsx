@@ -7,6 +7,7 @@ export default function ProductivityPage() {
       title="Productivity"
       description="Accounting and productivity tools I've built."
       projects={productivityProjects}
+      accent="var(--accent-productivity)"
     />
   );
 }

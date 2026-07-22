@@ -5,6 +5,9 @@
   --foreground: #e9ebef;
   --muted: #9aa2b1;
   --accent: #5fb3f9;
+  --accent-apps: #6c9bff;
+  --accent-data: #c084fc;
+  --accent-productivity: #34d399;
   --card: #12151c;
   --border: #232733;
 }
@@ -15,6 +18,9 @@
     --foreground: #14161a;
     --muted: #5a6172;
     --accent: #1f6fb4;
+    --accent-apps: #3b6fe0;
+    --accent-data: #9333ea;
+    --accent-productivity: #059669;
     --card: #ffffff;
     --border: #e3e6ec;
   }
@@ -38,4 +44,8 @@ body {
 
 a {
   color: inherit;
+}
+
+.project-card-link:hover {
+  border-color: var(--card-accent, var(--accent));
 }

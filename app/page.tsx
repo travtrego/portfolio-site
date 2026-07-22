@@ -5,6 +5,13 @@ export default function Home() {
   return (
     <main className="mx-auto max-w-4xl px-6 py-12">
       <section>
+        <div
+          className="mb-4 h-1.5 w-16 rounded-full"
+          style={{
+            background:
+              "linear-gradient(90deg, var(--accent-apps), var(--accent-data), var(--accent-productivity))",
+          }}
+        />
         <h1 className="text-3xl font-bold">{site.name}</h1>
         <p className="mt-2 max-w-xl text-[var(--muted)]">{site.tagline}</p>
       </section>

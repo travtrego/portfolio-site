@@ -8,7 +8,7 @@ export type Project = {
 };
 
 export const site = {
-  name: "Your Name",
+  name: "Travis Sherman Trego",
   tagline: "Building things with AI, data, and code — one project at a time.",
   about: [
     "In an effort to upskill within the accounting field, I fell into the AI rabbit hole — a few training modules turned into Python tutorials, and Python tutorials turned into building things I had no business building. Here we are. This site is that sandbox: hobby apps, data analytics projects I'm still figuring out, and a few productivity experiments aimed at making an accountant's life less painful. Call it upskilling with a sense of humor.",
@@ -48,8 +48,8 @@ export const apps: Project[] = [
 export const dataProjects: Project[] = [
   {
     title: "CPA Study App",
-    description: "Details coming soon.",
-    comingSoon: true,
+    description: "A study tool built to help prepare for the CPA exam.",
+    href: "https://tcp-study-app.vercel.app/",
   },
   {
     title: "Digit Recognizer (Kaggle MNIST)",

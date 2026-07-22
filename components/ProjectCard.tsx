@@ -1,6 +1,6 @@
 import type { Project } from "@/lib/content";
 
-export default function ProjectCard({ project }: { project: Project }) {
+export default function ProjectCard({ project, accent }: { project: Project; accent: string }) {
   const content = (
     <>
       <div className="flex items-center justify-between gap-2">
@@ -17,7 +17,8 @@ export default function ProjectCard({ project }: { project: Project }) {
           {project.tags.map((tag) => (
             <span
               key={tag}
-              className="rounded-full border border-[var(--border)] px-2 py-0.5 text-xs text-[var(--muted)]"
+              className="rounded-full px-2 py-0.5 text-xs font-medium"
+              style={{ color: accent, backgroundColor: `color-mix(in srgb, ${accent} 15%, transparent)` }}
             >
               {tag}
             </span>
@@ -52,7 +53,8 @@ export default function ProjectCard({ project }: { project: Project }) {
       href={project.href}
       target="_blank"
       rel="noopener noreferrer"
-      className={`${baseClasses} border-[var(--border)] bg-[var(--card)] hover:border-[var(--accent)]`}
+      className={`${baseClasses} project-card-link border-[var(--border)] bg-[var(--card)]`}
+      style={{ ["--card-accent" as string]: accent }}
     >
       {content}
     </a>

@@ -4,10 +4,10 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 
 const links = [
-  { href: "/", label: "Home" },
-  { href: "/apps", label: "Apps" },
-  { href: "/data-projects", label: "Data Projects" },
-  { href: "/productivity", label: "Productivity" },
+  { href: "/", label: "Home", accent: "var(--accent)" },
+  { href: "/apps", label: "Apps", accent: "var(--accent-apps)" },
+  { href: "/data-projects", label: "Data Projects", accent: "var(--accent-data)" },
+  { href: "/productivity", label: "Productivity", accent: "var(--accent-productivity)" },
 ];
 
 export default function Nav() {
@@ -22,8 +22,9 @@ export default function Nav() {
             <Link
               key={link.href}
               href={link.href}
+              style={active ? { color: link.accent } : undefined}
               className={`text-sm font-medium transition-colors ${
-                active ? "text-[var(--accent)]" : "text-[var(--muted)] hover:text-[var(--foreground)]"
+                active ? "" : "text-[var(--muted)] hover:text-[var(--foreground)]"
               }`}
             >
               {link.label}
