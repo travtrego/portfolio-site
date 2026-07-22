@@ -4,28 +4,26 @@ import { site } from "@/lib/content";
 export default function Home() {
   return (
     <main className="mx-auto max-w-4xl px-6 py-12">
-      <section className="flex flex-col items-start gap-6 sm:flex-row sm:items-center">
-        <div className="flex gap-3">
-          {site.photos.map((photo) => (
-            <div
-              key={photo.src}
-              className="flex h-28 w-28 items-center justify-center overflow-hidden rounded-full border border-[var(--border)] bg-[var(--card)] text-xs text-[var(--muted)]"
-            >
-              <Image
-                src={photo.src}
-                alt={photo.alt}
-                width={112}
-                height={112}
-                className="h-full w-full object-cover"
-                unoptimized
-              />
-            </div>
-          ))}
-        </div>
-        <div>
-          <h1 className="text-3xl font-bold">{site.name}</h1>
-          <p className="mt-2 max-w-xl text-[var(--muted)]">{site.tagline}</p>
-        </div>
+      <section>
+        <h1 className="text-3xl font-bold">{site.name}</h1>
+        <p className="mt-2 max-w-xl text-[var(--muted)]">{site.tagline}</p>
+      </section>
+
+      <section className="mt-8 grid grid-cols-2 gap-4 sm:grid-cols-3">
+        {site.photos.map((photo) => (
+          <div
+            key={photo.src}
+            className="relative aspect-square overflow-hidden rounded-2xl border border-[var(--border)] bg-[var(--card)]"
+          >
+            <Image
+              src={photo.src}
+              alt={photo.alt}
+              fill
+              sizes="(max-width: 640px) 50vw, 33vw"
+              className="object-cover"
+            />
+          </div>
+        ))}
       </section>
 
       <section className="mt-12">

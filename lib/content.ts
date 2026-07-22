@@ -17,8 +17,11 @@ export const site = {
     "Navy veteran, Electronic Warfare Operator, deployed across the Middle East and North Africa. I'm still working through the scars that came home with me — building things, one project at a time, is part of how I find my way back.",
   ],
   photos: [
-    { src: "/photos/photo-1.jpg", alt: "Add a photo of yourself" },
-    { src: "/photos/photo-2.jpg", alt: "Add another photo" },
+    { src: "/photos/navy-uniform.jpg", alt: "In U.S. Navy uniform aboard ship" },
+    { src: "/photos/wedding-kiss.jpg", alt: "Wedding day" },
+    { src: "/photos/body-armor-selfie.jpg", alt: "Geared up on deployment" },
+    { src: "/photos/dog-belly-rub.jpg", alt: "Belly rubs for the dog" },
+    { src: "/photos/dog-blanket.jpg", alt: "The dog, unbothered" },
   ],
 };
 
