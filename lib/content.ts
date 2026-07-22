@@ -43,13 +43,19 @@ export const apps: Project[] = [
   {
     title: "TCP Mastery — CPA Study App",
     description:
-      "Built a fully offline-capable Progressive Web App for CPA exam prep (Tax Compliance & Planning) — installable to your home screen, works without a connection, and runs entirely client-side in vanilla JavaScript with zero backend. Features an adaptive quiz engine (weak-area drilling, timed mode, custom quizzes, question-of-the-day), a full analytics dashboard (accuracy, streaks, topic breakdowns, weekly heatmap), multi-profile support with JSON backup/restore, and a built-in tutor that explains every question three ways — plain English, step-by-step, and \"why the trap.\"",
+      "Built a fully offline-capable Progressive Web App for CPA exam prep (Tax Compliance & Planning) — installable to your home screen, works without a connection, and runs entirely client-side in vanilla HTML/CSS/JavaScript with zero backend or framework. Deployed as a static site on Vercel with custom cache-control headers so service worker and manifest updates roll out immediately instead of going stale. Features an adaptive quiz engine (weak-area drilling, timed mode, custom quizzes, question-of-the-day), a full analytics dashboard (accuracy, streaks, topic breakdowns, weekly heatmap), multi-profile support with JSON backup/restore, and a built-in tutor that explains every question three ways — plain English, step-by-step, and \"why the trap.\"",
     href: "https://tcp-study-app.vercel.app/",
     tags: [
       "Vanilla JavaScript",
       "Progressive Web App (PWA)",
       "Offline-first / service worker",
+      "Vercel deployment",
       "Client-side state & analytics",
+    ],
+    images: [
+      { src: "/projects/tcp-mastery/home.png", alt: "Unit 1 course home and daily study plan" },
+      { src: "/projects/tcp-mastery/quiz.png", alt: "Practice quiz with answer feedback" },
+      { src: "/projects/tcp-mastery/stats.png", alt: "Analytics dashboard with topic accuracy and study heatmap" },
     ],
     nextSteps: [
       "Wire up a live AI tutor (the app currently flags this as the next step beyond its built-in explanations)",

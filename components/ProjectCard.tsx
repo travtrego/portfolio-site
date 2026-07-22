@@ -14,13 +14,19 @@ export default function ProjectCard({ project, accent }: { project: Project; acc
       </div>
       <p className="mt-2 text-sm text-[var(--muted)]">{project.description}</p>
       {project.images && project.images.length > 0 && (
-        <div className="mt-4 grid grid-cols-2 gap-2">
+        <div className="mt-4 grid grid-cols-2 gap-2 sm:grid-cols-3">
           {project.images.map((image) => (
             <div
               key={image.src}
-              className="relative aspect-video overflow-hidden rounded-md border border-[var(--border)] bg-[var(--background)]"
+              className="relative h-44 overflow-hidden rounded-md border border-[var(--border)] bg-[var(--background)]"
             >
-              <Image src={image.src} alt={image.alt} fill sizes="(max-width: 640px) 50vw, 25vw" className="object-cover" />
+              <Image
+                src={image.src}
+                alt={image.alt}
+                fill
+                sizes="(max-width: 640px) 50vw, 25vw"
+                className="object-contain"
+              />
             </div>
           ))}
         </div>
