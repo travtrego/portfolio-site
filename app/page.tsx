@@ -5,7 +5,9 @@ export default function Home() {
   return (
     <main className="mx-auto max-w-4xl px-6 py-12">
       <section>
-        <h1 className="text-4xl font-extrabold sm:text-5xl">{site.name}</h1>
+        <h1 className="text-4xl font-extrabold sm:text-5xl" style={{ color: "var(--accent)" }}>
+          {site.name}
+        </h1>
         <p className="mt-3 max-w-xl text-lg text-[var(--muted)]">{site.tagline}</p>
       </section>
 
@@ -13,7 +15,8 @@ export default function Home() {
         {site.photos.map((photo) => (
           <div
             key={photo.src}
-            className="relative aspect-square overflow-hidden rounded-2xl border-2 border-[var(--border)] bg-[var(--card)] transition-transform hover:-translate-y-1"
+            className="relative aspect-square overflow-hidden rounded-2xl border-2 bg-[var(--card)] transition-transform hover:-translate-y-1"
+            style={{ borderColor: "var(--accent)" }}
           >
             <Image
               src={photo.src}
