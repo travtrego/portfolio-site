@@ -1,36 +1,19 @@
 import Image from "next/image";
 import { site } from "@/lib/content";
 
-const photoAccents = [
-  "var(--accent-apps)",
-  "var(--accent-fun)",
-  "var(--accent-data)",
-  "var(--accent-productivity)",
-  "var(--accent)",
-];
-
 export default function Home() {
   return (
     <main className="mx-auto max-w-4xl px-6 py-12">
       <section>
-        <h1
-          className="bg-clip-text text-4xl font-extrabold text-transparent sm:text-5xl"
-          style={{
-            backgroundImage:
-              "linear-gradient(90deg, var(--accent-apps), var(--accent-fun), var(--accent-data), var(--accent-productivity))",
-          }}
-        >
-          {site.name}
-        </h1>
+        <h1 className="text-4xl font-extrabold sm:text-5xl">{site.name}</h1>
         <p className="mt-3 max-w-xl text-lg text-[var(--muted)]">{site.tagline}</p>
       </section>
 
       <section className="mt-8 grid grid-cols-2 gap-4 sm:grid-cols-3">
-        {site.photos.map((photo, i) => (
+        {site.photos.map((photo) => (
           <div
             key={photo.src}
-            className="relative aspect-square overflow-hidden rounded-2xl border-2 bg-[var(--card)] transition-transform hover:-translate-y-1 hover:rotate-1"
-            style={{ borderColor: photoAccents[i % photoAccents.length] }}
+            className="relative aspect-square overflow-hidden rounded-2xl border-2 border-[var(--border)] bg-[var(--card)] transition-transform hover:-translate-y-1"
           >
             <Image
               src={photo.src}
