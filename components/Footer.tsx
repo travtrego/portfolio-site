@@ -16,6 +16,12 @@ export default function Footer() {
         >
           LinkedIn
         </a>
+        <p
+          className="mt-1 text-xs text-[var(--muted)] opacity-70"
+          title="A walrus's tusks never stop growing — same energy as this site."
+        >
+          A Walrus Production site 🦭
+        </p>
       </div>
     </footer>
   );
