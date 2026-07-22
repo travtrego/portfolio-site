@@ -56,9 +56,15 @@ export const dataProjects: Project[] = [
   {
     title: "Digit Recognizer (Kaggle MNIST)",
     description:
-      "The classic Kaggle project — CNNs (Keras/TensorFlow) trained to recognize handwritten digits from the MNIST dataset. 99.34% test accuracy, 66 mistakes out of 10,000.",
+      "Designed and trained three progressively deeper CNNs from scratch in Keras/TensorFlow — stacking Conv2D blocks with batch normalization and dropout, tuning learning rate schedules with EarlyStopping and ReduceLROnPlateau, and diagnosing failures with a full misclassification breakdown. Landed at 99.34% test accuracy, missing just 66 out of 10,000 handwritten digits.",
     href: "https://github.com/travtrego/digit-recognizer",
-    tags: ["Python", "TensorFlow / Keras", "Image classification", "Neural networks / CNNs"],
+    tags: [
+      "Python",
+      "TensorFlow / Keras",
+      "CNN architecture design",
+      "Batch norm & dropout tuning",
+      "Model evaluation",
+    ],
     images: [
       { src: "/projects/digit-recognizer/training-curves.png", alt: "Training accuracy and loss curves" },
       { src: "/projects/digit-recognizer/misclassified.png", alt: "Misclassified test digits" },
