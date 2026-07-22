@@ -5,6 +5,16 @@ export default function Footer() {
         Contact Travis Trego —{" "}
         <a href="mailto:travtrego@gmail.com" className="font-medium underline" style={{ color: "var(--accent)" }}>
           travtrego@gmail.com
+        </a>{" "}
+        ·{" "}
+        <a
+          href="https://www.linkedin.com/in/travis-t-14496347"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="font-medium underline"
+          style={{ color: "var(--accent)" }}
+        >
+          LinkedIn
         </a>
       </div>
     </footer>
