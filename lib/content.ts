@@ -1,7 +1,8 @@
 export type Project = {
   title: string;
   description: string;
-  href?: string;
+  github?: string;
+  demo?: string;
   tags?: string[];
   improvements?: string[];
   nextSteps?: string[];
@@ -32,7 +33,8 @@ export const apps: Project[] = [
     title: "TCP Mastery — CPA Study App",
     description:
       "Built a fully offline-capable Progressive Web App for CPA exam prep (Tax Compliance & Planning) — installable to your home screen, works without a connection, and runs entirely client-side in vanilla HTML/CSS/JavaScript with zero backend or framework. Deployed as a static site on Vercel with custom cache-control headers so service worker and manifest updates roll out immediately instead of going stale. Features an adaptive quiz engine (weak-area drilling, timed mode, custom quizzes, question-of-the-day), a full analytics dashboard (accuracy, streaks, topic breakdowns, weekly heatmap), multi-profile support with JSON backup/restore, and a built-in tutor that explains every question three ways — plain English, step-by-step, and \"why the trap.\"",
-    href: "https://tcp-study-app.vercel.app/",
+    github: "https://github.com/travtrego/-tcp-study-app",
+    demo: "https://tcp-study-app.vercel.app/",
     tags: [
       "Vanilla JavaScript",
       "Progressive Web App (PWA)",
@@ -62,7 +64,8 @@ export const funStuff: Project[] = [
     title: "Phillies Prospect Pulse",
     description:
       "A full-stack farm-system dashboard for the Phillies' minor-league prospects. An automated pipeline pulls and reconciles news, stats, promotions, and injuries on a schedule (a daily Vercel cron job snapshots rankings history), feeding a custom weighted ranking model (scouting, performance, age/level, media sentiment, risk) that shows exactly what moved each player's rank, not just a final score. \"Prospect Genie\" is a Claude-powered chat assistant that reasons over the live database to answer natural-language questions about the system — why a player hasn't been promoted, who's trending, head-to-head comparisons. Backed by Supabase, with an automated quality pipeline (data audits, ranking backtests against historical outcomes, and typechecking) run before every deploy.",
-    href: "https://github.com/travtrego/phillies-prospect-pulse",
+    github: "https://github.com/travtrego/phillies-prospect-pulse",
+    demo: "https://phillies-prospect-pulse-self.vercel.app/",
     tags: [
       "Next.js",
       "TypeScript",
@@ -88,7 +91,7 @@ export const dataProjects: Project[] = [
     title: "Digit Recognizer (Kaggle MNIST)",
     description:
       "Designed and trained three progressively deeper CNNs from scratch in Keras/TensorFlow — stacking Conv2D blocks with batch normalization and dropout, tuning learning rate schedules with EarlyStopping and ReduceLROnPlateau, and diagnosing failures with a full misclassification breakdown. Landed at 99.34% test accuracy, missing just 66 out of 10,000 handwritten digits.",
-    href: "https://github.com/travtrego/digit-recognizer",
+    github: "https://github.com/travtrego/digit-recognizer",
     tags: [
       "Python",
       "TensorFlow / Keras",

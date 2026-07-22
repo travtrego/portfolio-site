@@ -14,8 +14,13 @@ export default function ProjectGrid({
 }) {
   return (
     <main className="mx-auto max-w-4xl px-6 py-12">
-      <div className="border-l-4 pl-4" style={{ borderColor: accent }}>
-        <h1 className="text-2xl font-bold">{title}</h1>
+      <div
+        className="rounded-2xl border-2 p-5"
+        style={{ borderColor: accent, backgroundColor: `color-mix(in srgb, ${accent} 8%, transparent)` }}
+      >
+        <h1 className="text-3xl font-extrabold" style={{ color: accent }}>
+          {title}
+        </h1>
         <p className="mt-2 text-[var(--muted)]">{description}</p>
       </div>
       <div className="mt-8 grid gap-4 sm:grid-cols-2">

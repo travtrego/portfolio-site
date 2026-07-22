@@ -1,26 +1,36 @@
 import Image from "next/image";
 import { site } from "@/lib/content";
 
+const photoAccents = [
+  "var(--accent-apps)",
+  "var(--accent-fun)",
+  "var(--accent-data)",
+  "var(--accent-productivity)",
+  "var(--accent)",
+];
+
 export default function Home() {
   return (
     <main className="mx-auto max-w-4xl px-6 py-12">
       <section>
-        <div
-          className="mb-4 h-1.5 w-16 rounded-full"
+        <h1
+          className="bg-clip-text text-4xl font-extrabold text-transparent sm:text-5xl"
           style={{
-            background:
-              "linear-gradient(90deg, var(--accent-apps), var(--accent-data), var(--accent-productivity))",
+            backgroundImage:
+              "linear-gradient(90deg, var(--accent-apps), var(--accent-fun), var(--accent-data), var(--accent-productivity))",
           }}
-        />
-        <h1 className="text-3xl font-bold">{site.name}</h1>
-        <p className="mt-2 max-w-xl text-[var(--muted)]">{site.tagline}</p>
+        >
+          {site.name}
+        </h1>
+        <p className="mt-3 max-w-xl text-lg text-[var(--muted)]">{site.tagline}</p>
       </section>
 
       <section className="mt-8 grid grid-cols-2 gap-4 sm:grid-cols-3">
-        {site.photos.map((photo) => (
+        {site.photos.map((photo, i) => (
           <div
             key={photo.src}
-            className="relative aspect-square overflow-hidden rounded-2xl border border-[var(--border)] bg-[var(--card)]"
+            className="relative aspect-square overflow-hidden rounded-2xl border-2 bg-[var(--card)] transition-transform hover:-translate-y-1 hover:rotate-1"
+            style={{ borderColor: photoAccents[i % photoAccents.length] }}
           >
             <Image
               src={photo.src}
@@ -33,8 +43,16 @@ export default function Home() {
         ))}
       </section>
 
-      <section className="mt-12">
-        <h2 className="text-xl font-semibold">Why AI, analytics, and development</h2>
+      <section
+        className="mt-12 rounded-2xl border-2 p-6"
+        style={{
+          borderColor: "var(--accent-fun)",
+          backgroundColor: "color-mix(in srgb, var(--accent-fun) 8%, transparent)",
+        }}
+      >
+        <h2 className="text-xl font-bold" style={{ color: "var(--accent-fun)" }}>
+          Why AI, analytics, and development
+        </h2>
         <div className="mt-3 space-y-3 text-[var(--muted)]">
           {site.about.map((paragraph, i) => (
             <p key={i}>{paragraph}</p>
@@ -42,8 +60,16 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="mt-12">
-        <h2 className="text-xl font-semibold">A bit about me</h2>
+      <section
+        className="mt-6 rounded-2xl border-2 p-6"
+        style={{
+          borderColor: "var(--accent-apps)",
+          backgroundColor: "color-mix(in srgb, var(--accent-apps) 8%, transparent)",
+        }}
+      >
+        <h2 className="text-xl font-bold" style={{ color: "var(--accent-apps)" }}>
+          A bit about me
+        </h2>
         <div className="mt-3 space-y-3 text-[var(--muted)]">
           {site.bio.map((paragraph, i) => (
             <p key={i}>{paragraph}</p>

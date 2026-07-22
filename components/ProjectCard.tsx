@@ -5,7 +5,7 @@ export default function ProjectCard({ project, accent }: { project: Project; acc
   const content = (
     <>
       <div className="flex items-center justify-between gap-2">
-        <h3 className="text-lg font-semibold">{project.title}</h3>
+        <h3 className="text-lg font-bold">{project.title}</h3>
         {project.comingSoon && (
           <span className="shrink-0 rounded-full border border-dashed border-[var(--border)] px-2 py-0.5 text-xs text-[var(--muted)]">
             In progress
@@ -18,7 +18,7 @@ export default function ProjectCard({ project, accent }: { project: Project; acc
           {project.images.map((image) => (
             <div
               key={image.src}
-              className="relative h-44 overflow-hidden rounded-md border border-[var(--border)] bg-[var(--background)]"
+              className="relative h-44 overflow-hidden rounded-lg border-2 border-[var(--border)] bg-[var(--background)]"
             >
               <Image
                 src={image.src}
@@ -29,6 +29,32 @@ export default function ProjectCard({ project, accent }: { project: Project; acc
               />
             </div>
           ))}
+        </div>
+      )}
+      {(project.github || project.demo) && (
+        <div className="mt-4 flex flex-wrap gap-2">
+          {project.demo && (
+            <a
+              href={project.demo}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="rounded-full px-3 py-1 text-xs font-bold text-white shadow-sm transition-transform hover:-translate-y-0.5"
+              style={{ backgroundColor: accent }}
+            >
+              Live demo ↗
+            </a>
+          )}
+          {project.github && (
+            <a
+              href={project.github}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="rounded-full border-2 px-3 py-1 text-xs font-bold transition-transform hover:-translate-y-0.5"
+              style={{ borderColor: accent, color: accent }}
+            >
+              GitHub ↗
+            </a>
+          )}
         </div>
       )}
       {project.tags && project.tags.length > 0 && (
@@ -67,25 +93,20 @@ export default function ProjectCard({ project, accent }: { project: Project; acc
     </>
   );
 
-  const baseClasses = "block rounded-lg border p-5 transition-colors";
-
-  if (project.comingSoon || !project.href) {
+  if (project.comingSoon) {
     return (
-      <div className={`${baseClasses} border-dashed border-[var(--border)] bg-[var(--card)] opacity-70`}>
+      <div className="rounded-2xl border-2 border-dashed border-[var(--border)] bg-[var(--card)] p-5 opacity-70">
         {content}
       </div>
     );
   }
 
   return (
-    <a
-      href={project.href}
-      target="_blank"
-      rel="noopener noreferrer"
-      className={`${baseClasses} project-card-link border-[var(--border)] bg-[var(--card)]`}
-      style={{ ["--card-accent" as string]: accent }}
+    <div
+      className="project-card rounded-2xl border-2 bg-[var(--card)] p-5 transition-transform hover:-translate-y-1 hover:rotate-[-0.3deg]"
+      style={{ borderColor: accent, boxShadow: `5px 5px 0 0 ${accent}` }}
     >
       {content}
-    </a>
+    </div>
   );
 }
