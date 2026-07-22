@@ -29,18 +29,6 @@ export const site = {
 
 export const apps: Project[] = [
   {
-    title: "Phillies Prospect Pulse",
-    description: "A prospect-tracking app built for fun.",
-    href: "https://github.com/travtrego/phillies-prospect-pulse",
-    tags: ["Next.js", "TypeScript", "Sports data integration", "Component-based UI"],
-    improvements: [
-      "Limited to static or manually-updated data (no live sync yet)",
-      "No automated testing",
-      "Could use better error handling for API failures",
-      "UI is functional but not yet polished",
-    ],
-  },
-  {
     title: "TCP Mastery — CPA Study App",
     description:
       "Built a fully offline-capable Progressive Web App for CPA exam prep (Tax Compliance & Planning) — installable to your home screen, works without a connection, and runs entirely client-side in vanilla HTML/CSS/JavaScript with zero backend or framework. Deployed as a static site on Vercel with custom cache-control headers so service worker and manifest updates roll out immediately instead of going stale. Features an adaptive quiz engine (weak-area drilling, timed mode, custom quizzes, question-of-the-day), a full analytics dashboard (accuracy, streaks, topic breakdowns, weekly heatmap), multi-profile support with JSON backup/restore, and a built-in tutor that explains every question three ways — plain English, step-by-step, and \"why the trap.\"",
@@ -66,6 +54,32 @@ export const apps: Project[] = [
     title: "More apps",
     description: "Next slot.",
     comingSoon: true,
+  },
+];
+
+export const funStuff: Project[] = [
+  {
+    title: "Phillies Prospect Pulse",
+    description:
+      "A full-stack farm-system dashboard for the Phillies' minor-league prospects. An automated pipeline pulls and reconciles news, stats, promotions, and injuries on a schedule (a daily Vercel cron job snapshots rankings history), feeding a custom weighted ranking model (scouting, performance, age/level, media sentiment, risk) that shows exactly what moved each player's rank, not just a final score. \"Prospect Genie\" is a Claude-powered chat assistant that reasons over the live database to answer natural-language questions about the system — why a player hasn't been promoted, who's trending, head-to-head comparisons. Backed by Supabase, with an automated quality pipeline (data audits, ranking backtests against historical outcomes, and typechecking) run before every deploy.",
+    href: "https://github.com/travtrego/phillies-prospect-pulse",
+    tags: [
+      "Next.js",
+      "TypeScript",
+      "Supabase",
+      "Claude API (Anthropic SDK)",
+      "Automated data pipelines",
+      "Custom ranking model",
+    ],
+    images: [
+      { src: "/projects/prospect-pulse/rankings.png", alt: "Top 30 prospect rankings table" },
+      { src: "/projects/prospect-pulse/player.png", alt: "Player profile with organizational rank" },
+      { src: "/projects/prospect-pulse/genie.png", alt: "Prospect Genie AI chat assistant" },
+    ],
+    nextSteps: [
+      "Wire up \"Ask Pulse,\" a scaffolded natural-language query page, to answer directly against the live database",
+      "Feed backtest results back into the ranking model to tune its weights over time",
+    ],
   },
 ];
 
