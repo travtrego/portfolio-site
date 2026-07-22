@@ -5,6 +5,7 @@ export type Project = {
   tags?: string[];
   improvements?: string[];
   comingSoon?: boolean;
+  images?: { src: string; alt: string }[];
 };
 
 export const site = {
@@ -54,12 +55,19 @@ export const dataProjects: Project[] = [
   {
     title: "Digit Recognizer (Kaggle MNIST)",
     description:
-      "The classic Kaggle project — a machine learning model trained to recognize handwritten digits from the MNIST dataset.",
-    tags: ["Python", "scikit-learn / TensorFlow-Keras", "Image classification", "Neural networks / CNNs"],
+      "The classic Kaggle project — CNNs (Keras/TensorFlow) trained to recognize handwritten digits from the MNIST dataset. 99.34% test accuracy, 66 mistakes out of 10,000.",
+    href: "https://github.com/travtrego/digit-recognizer",
+    tags: ["Python", "TensorFlow / Keras", "Image classification", "Neural networks / CNNs"],
+    images: [
+      { src: "/projects/digit-recognizer/sample-digits.png", alt: "Sample training digits" },
+      { src: "/projects/digit-recognizer/training-curves.png", alt: "Training accuracy and loss curves" },
+      { src: "/projects/digit-recognizer/confusion-matrix.png", alt: "Confusion matrix" },
+      { src: "/projects/digit-recognizer/misclassified.png", alt: "Misclassified test digits" },
+    ],
     improvements: [
-      "No data augmentation",
-      "Likely a simple architecture (room to try CNNs if not already)",
-      "No hyperparameter tuning",
+      "No data augmentation on the deeper models (only tried on the first)",
+      "No formal hyperparameter tuning — architecture changes were manual/iterative",
+      "No cross-validation, just a single train/val split",
       "Doesn't generalize beyond clean/centered digit images",
     ],
   },

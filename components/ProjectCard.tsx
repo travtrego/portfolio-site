@@ -1,3 +1,4 @@
+import Image from "next/image";
 import type { Project } from "@/lib/content";
 
 export default function ProjectCard({ project, accent }: { project: Project; accent: string }) {
@@ -12,6 +13,18 @@ export default function ProjectCard({ project, accent }: { project: Project; acc
         )}
       </div>
       <p className="mt-2 text-sm text-[var(--muted)]">{project.description}</p>
+      {project.images && project.images.length > 0 && (
+        <div className="mt-4 grid grid-cols-2 gap-2">
+          {project.images.map((image) => (
+            <div
+              key={image.src}
+              className="relative aspect-video overflow-hidden rounded-md border border-[var(--border)] bg-[var(--background)]"
+            >
+              <Image src={image.src} alt={image.alt} fill sizes="(max-width: 640px) 50vw, 25vw" className="object-cover" />
+            </div>
+          ))}
+        </div>
+      )}
       {project.tags && project.tags.length > 0 && (
         <div className="mt-4 flex flex-wrap gap-2">
           {project.tags.map((tag) => (
