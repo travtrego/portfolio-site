@@ -41,14 +41,6 @@ export const apps: Project[] = [
     ],
   },
   {
-    title: "More apps",
-    description: "Next slot.",
-    comingSoon: true,
-  },
-];
-
-export const dataProjects: Project[] = [
-  {
     title: "TCP Mastery — CPA Study App",
     description:
       "Built a fully offline-capable Progressive Web App for CPA exam prep (Tax Compliance & Planning) — installable to your home screen, works without a connection, and runs entirely client-side in vanilla JavaScript with zero backend. Features an adaptive quiz engine (weak-area drilling, timed mode, custom quizzes, question-of-the-day), a full analytics dashboard (accuracy, streaks, topic breakdowns, weekly heatmap), multi-profile support with JSON backup/restore, and a built-in tutor that explains every question three ways — plain English, step-by-step, and \"why the trap.\"",
@@ -64,6 +56,14 @@ export const dataProjects: Project[] = [
       "Expand past Unit 1 to cover the rest of the TCP discipline",
     ],
   },
+  {
+    title: "More apps",
+    description: "Next slot.",
+    comingSoon: true,
+  },
+];
+
+export const dataProjects: Project[] = [
   {
     title: "Digit Recognizer (Kaggle MNIST)",
     description:
