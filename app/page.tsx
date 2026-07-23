@@ -31,7 +31,7 @@ export default function Home() {
           {site.name}
         </h1>
         <p className="mt-3 max-w-xl text-lg text-[var(--muted)]">
-          Navy veteran, husband, and dog dad, teaching myself to build with AI alongside AI.
+          Navy veteran, husband, and dog dad, currently teaching myself how to build with AI.
         </p>
       </section>
 
@@ -64,7 +64,7 @@ export default function Home() {
           Why AI, analytics, and development
         </h2>
         <p className="mt-3 text-[var(--muted)]">
-          I work in accounting and stumbled into AI through a few required training modules. That turned into teaching myself Python, web development, databases, and automation by building real projects, often with AI helping me figure things out as I go. This site documents that process: building with AI, alongside AI.
+          I stumbled into AI through a few required training courses at work. Since then, I&apos;ve been teaching myself Python, web development, databases, and automation by building real projects with AI as a collaborator—not just a tool.
         </p>
       </section>
 
