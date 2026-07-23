@@ -30,7 +30,9 @@ export default function Home() {
         <h1 className="text-4xl font-extrabold sm:text-5xl" style={{ color: "var(--accent)" }}>
           {site.name}
         </h1>
-        <p className="mt-3 max-w-xl text-lg text-[var(--muted)]">{site.tagline}</p>
+        <p className="mt-3 max-w-xl text-lg text-[var(--muted)]">
+          Navy veteran, husband, and dog dad, teaching myself to build with AI alongside AI.
+        </p>
       </section>
 
       <section className="mt-8 grid grid-cols-2 gap-4 sm:grid-cols-4">
@@ -61,11 +63,9 @@ export default function Home() {
         <h2 className="text-xl font-bold" style={{ color: "var(--accent-fun)" }}>
           Why AI, analytics, and development
         </h2>
-        <div className="mt-3 space-y-3 text-[var(--muted)]">
-          {site.about.map((paragraph, i) => (
-            <p key={i}>{paragraph}</p>
-          ))}
-        </div>
+        <p className="mt-3 text-[var(--muted)]">
+          I work in accounting and stumbled into AI through a few required training modules. That turned into teaching myself Python, web development, databases, and automation by building real projects, often with AI helping me figure things out as I go. This site documents that process: building with AI, alongside AI.
+        </p>
       </section>
 
       <section
