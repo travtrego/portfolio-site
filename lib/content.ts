@@ -88,7 +88,6 @@ export const funStuff: Project[] = [
     description:
       "A mushroom cultivation tracker built around a real phase state machine — every batch moves through grain colonization, break & shake, bulk colonizing, fruiting, drying, and done, with location assignment and dried-weight yields logged at each step. The lab map (shelves and chambers) derives occupancy from each batch's location instead of storing the relationship twice, and every mutating action writes one entry to both the batch's own history and a global activity log in the same call — so the audit trail can't drift out of sync. Next.js + TypeScript on the frontend, Postgres (Neon) on the backend.",
     github: "https://github.com/travtrego/MycoFlow",
-    demo: "https://mycoflow-rho.vercel.app/",
     tags: ["Next.js", "TypeScript", "Postgres (Neon)", "State machine design", "Data modeling"],
     images: [
       { src: "/projects/mycoflow/dashboard.png", alt: "Cultivation overview dashboard" },
