@@ -123,6 +123,28 @@ export const dataProjects: Project[] = [
       "Test it against messier real-world handwriting, not just clean/centered MNIST digits",
     ],
   },
+  {
+    title: "Greenwashing Risk Detector",
+    description:
+      "A screening model for greenwashing risk in corporate climate claims, built from 2025 sustainability and environmental performance reports from three major airlines. Each claim is scored against five credibility indicators — a stated number, target year, baseline year, emissions scope, and progress evidence — with only the indicators actually applicable to that type of claim counted, so a claim isn't penalized for missing a scope reference it was never expected to have. Claims that back up fewer of their applicable indicators score higher on a 0–5 Greenwashing Risk Score. Rebuilt from a messy exploratory notebook into a clean, documented Python/pandas pipeline (verified to reproduce the original scored output row-for-row before trusting the refactor) and a Next.js/Recharts dashboard modeled on the original Power BI report.",
+    github: "https://github.com/travtrego/greenwashing",
+    tags: [
+      "Python / pandas",
+      "Rule-based NLP scoring",
+      "Jupyter notebook cleanup",
+      "Next.js",
+      "TypeScript",
+      "Recharts",
+    ],
+    images: [
+      { src: "/projects/greenwashing/dashboard.png", alt: "Risk dashboard with per-airline and per-category breakdowns" },
+      { src: "/projects/greenwashing/methodology.png", alt: "Methodology page detailing the scoring formula and credibility indicators" },
+    ],
+    nextSteps: [
+      "Deploy the dashboard so the live version isn't just screenshots",
+      "Extend the credibility-indicator model beyond airlines to other high-emitting industries",
+    ],
+  },
 ];
 
 export const productivityProjects: Project[] = [
