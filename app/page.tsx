@@ -51,35 +51,6 @@ export default function Home() {
         ))}
       </section>
 
-      <section className="mt-12">
-        <h2 className="text-2xl font-extrabold">Featured Projects</h2>
-        <div className="mt-5 grid gap-5 sm:grid-cols-3">
-          {featuredProjects.map(({ project, href, description }) => (
-            <Link
-              key={project.title}
-              href={href}
-              className="group overflow-hidden rounded-2xl border-2 border-[var(--border)] bg-[var(--card)] transition-transform hover:-translate-y-1"
-            >
-              {project.images?.[0] && (
-                <div className="relative aspect-[16/10] overflow-hidden border-b-2 border-[var(--border)]">
-                  <Image
-                    src={project.images[0].src}
-                    alt={project.images[0].alt}
-                    fill
-                    sizes="(max-width: 640px) 100vw, 33vw"
-                    className="object-cover transition-transform duration-300 group-hover:scale-[1.02]"
-                  />
-                </div>
-              )}
-              <div className="p-5">
-                <h3 className="text-lg font-extrabold">{project.title}</h3>
-                <p className="mt-2 text-sm leading-relaxed text-[var(--muted)]">{description}</p>
-              </div>
-            </Link>
-          ))}
-        </div>
-      </section>
-
       <section
         className="mt-12 rounded-2xl border-2 p-6"
         style={{
@@ -110,6 +81,39 @@ export default function Home() {
         <div className="mt-3 space-y-3 text-[var(--muted)]">
           {site.bio.map((paragraph, i) => (
             <p key={i}>{paragraph}</p>
+          ))}
+        </div>
+      </section>
+
+      <section className="mt-12">
+        <div className="flex items-end justify-between gap-4">
+          <h2 className="text-2xl font-extrabold">Featured Projects</h2>
+          <span className="text-sm text-[var(--muted)]">Swipe to explore →</span>
+        </div>
+
+        <div className="mt-5 flex snap-x snap-mandatory gap-5 overflow-x-auto pb-4">
+          {featuredProjects.map(({ project, href, description }) => (
+            <Link
+              key={project.title}
+              href={href}
+              className="group w-[86%] shrink-0 snap-start overflow-hidden rounded-2xl border-2 border-[var(--border)] bg-[var(--card)] transition-transform hover:-translate-y-1 sm:w-[58%] lg:w-[46%]"
+            >
+              {project.images?.[0] && (
+                <div className="relative aspect-[16/9] overflow-hidden border-b-2 border-[var(--border)]">
+                  <Image
+                    src={project.images[0].src}
+                    alt={project.images[0].alt}
+                    fill
+                    sizes="(max-width: 640px) 86vw, 46vw"
+                    className="object-cover transition-transform duration-300 group-hover:scale-[1.02]"
+                  />
+                </div>
+              )}
+              <div className="p-5">
+                <h3 className="text-lg font-extrabold">{project.title}</h3>
+                <p className="mt-2 text-sm leading-relaxed text-[var(--muted)]">{description}</p>
+              </div>
+            </Link>
           ))}
         </div>
       </section>
