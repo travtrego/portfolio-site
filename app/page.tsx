@@ -50,39 +50,6 @@ export default function Home() {
         </div>
       </section>
 
-      <section
-        className="mt-12 rounded-2xl border-2 p-6"
-        style={{
-          borderColor: "var(--accent-fun)",
-          backgroundColor: "color-mix(in srgb, var(--accent-fun) 8%, transparent)",
-        }}
-      >
-        <h2 className="text-xl font-bold" style={{ color: "var(--accent-fun)" }}>
-          Why AI, analytics, and development
-        </h2>
-        <p className="mt-3 text-[var(--muted)]">
-          I stumbled into AI through a few required training courses at work. Since then, I&apos;ve been teaching myself Python, web development, databases, and automation by building real projects with AI as a collaborator—not just a tool.
-        </p>
-      </section>
-
-      <section
-        className="mt-6 rounded-2xl border-2 p-6"
-        style={{
-          borderColor: "var(--accent-apps)",
-          backgroundColor: "color-mix(in srgb, var(--accent-apps) 8%, transparent)",
-        }}
-      >
-        <h2 className="text-xl font-bold" style={{ color: "var(--accent-apps)" }}>
-          A bit about me
-        </h2>
-        <div className="mt-3 space-y-3 text-[var(--muted)]">
-          {site.bio.map((paragraph, i) => (
-            <p key={i}>{paragraph}</p>
-          ))}
-        </div>
-        <PhotoStrip photos={site.photos} accent="var(--accent-apps)" />
-      </section>
-
       <section className="mt-12">
         <div className="flex items-end justify-between gap-4">
           <h2 className="text-2xl font-extrabold">Featured Projects</h2>
@@ -116,6 +83,39 @@ export default function Home() {
             </Link>
           ))}
         </div>
+      </section>
+
+      <section
+        className="mt-12 rounded-2xl border-2 p-6"
+        style={{
+          borderColor: "var(--accent-fun)",
+          backgroundColor: "color-mix(in srgb, var(--accent-fun) 8%, transparent)",
+        }}
+      >
+        <h2 className="text-xl font-bold" style={{ color: "var(--accent-fun)" }}>
+          Why AI, analytics, and development
+        </h2>
+        <p className="mt-3 text-[var(--muted)]">
+          I stumbled into AI through a few required training courses at work. Since then, I&apos;ve been teaching myself Python, web development, databases, and automation by building real projects with AI as a collaborator—not just a tool.
+        </p>
+      </section>
+
+      <section
+        className="mt-6 rounded-2xl border-2 p-6"
+        style={{
+          borderColor: "var(--accent-apps)",
+          backgroundColor: "color-mix(in srgb, var(--accent-apps) 8%, transparent)",
+        }}
+      >
+        <h2 className="text-xl font-bold" style={{ color: "var(--accent-apps)" }}>
+          A bit about me
+        </h2>
+        <div className="mt-3 space-y-3 text-[var(--muted)]">
+          {site.bio.map((paragraph, i) => (
+            <p key={i}>{paragraph}</p>
+          ))}
+        </div>
+        <PhotoStrip photos={site.photos} accent="var(--accent-apps)" />
       </section>
     </main>
   );
