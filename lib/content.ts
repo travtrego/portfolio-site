@@ -145,6 +145,29 @@ export const dataProjects: Project[] = [
       "Extend the credibility-indicator model beyond airlines to other high-emitting industries",
     ],
   },
+  {
+    title: "FSO Risk Explorer",
+    description:
+      "Unsupervised clustering of risk factor language across 49 large US financial services companies, built from their 2025 Form 10-K filings. Each company's \"Item 1A. Risk Factors\" section is scraped from SEC EDGAR, split into 8,348 individual risk statements, vectorized with TF-IDF, and grouped into 12 clusters with K-means — 6 of which turned out to be genuine, business-model-aligned risk themes (Bank Capital & Liquidity, Cybersecurity & Data, Regulatory & Privacy, and others), rediscovering the industry's risk taxonomy without any labeled training data. Rebuilt from a messy exploratory notebook into a clean, documented pipeline verified to reproduce the original cluster assignments exactly, plus a Next.js/Recharts dashboard for exploring the results by sub-sector and by company.",
+    github: "https://github.com/travtrego/fso-risk-explorer",
+    tags: [
+      "Python / pandas",
+      "scikit-learn (TF-IDF, K-means)",
+      "SEC EDGAR data pipeline",
+      "Jupyter notebook cleanup",
+      "Next.js",
+      "TypeScript",
+      "Recharts",
+    ],
+    images: [
+      { src: "/projects/fso-risk-explorer/overview.png", alt: "Overview dashboard with risk volume by sub-sector and category" },
+      { src: "/projects/fso-risk-explorer/company-explorer.png", alt: "Per-company risk category breakdown and statement table" },
+    ],
+    nextSteps: [
+      "Deploy the dashboard so the live version isn't just screenshots",
+      "Recover Wells Fargo's risk factors, which are incorporated by reference rather than included directly in its 10-K",
+    ],
+  },
 ];
 
 export const productivityProjects: Project[] = [
