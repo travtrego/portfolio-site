@@ -1,28 +1,26 @@
 import Image from "next/image";
 import Link from "next/link";
 import PhotoStrip from "@/components/PhotoStrip";
-import { apps, funStuff, site } from "@/lib/content";
+import { apps, dataProjects, funStuff, productivityProjects, site } from "@/lib/content";
 
-const featuredProjects = [
-  {
-    project: funStuff[1],
-    href: "/fun-stuff",
-    description:
-      "A mushroom cultivation manager that tracks batches from agar to harvest, including locations, yields, and inventory.",
-  },
-  {
-    project: apps[0],
-    href: "/apps",
-    description:
-      "A CPA study app with adaptive quizzes, detailed explanations, progress tracking, and offline support.",
-  },
-  {
-    project: funStuff[0],
-    href: "/fun-stuff",
-    description:
-      "An automated dashboard for following Phillies prospects through live statistics, rankings, injuries, and news.",
-  },
+// Referenced by title rather than array index so reordering a section can't
+// silently swap out what the homepage features.
+const FEATURED = [
+  { title: "MycoFlow", href: "/fun-stuff" },
+  { title: "TCP Mastery — CPA Study App", href: "/apps" },
+  { title: "Phillies Prospect Pulse", href: "/fun-stuff" },
 ];
+
+const projectsByTitle = new Map(
+  [...apps, ...funStuff, ...dataProjects, ...productivityProjects].map((p) => [p.title, p])
+);
+
+const featuredProjects = FEATURED.map(({ title, href }) => {
+  const project = projectsByTitle.get(title);
+  // Fails the build rather than rendering a broken card if a title drifts.
+  if (!project) throw new Error(`Featured project not found in content.ts: "${title}"`);
+  return { project, href };
+});
 
 export default function Home() {
   return (
@@ -92,11 +90,11 @@ export default function Home() {
         </div>
 
         <div className="mt-5 flex snap-x snap-mandatory gap-5 overflow-x-auto pb-4">
-          {featuredProjects.map(({ project, href, description }) => (
+          {featuredProjects.map(({ project, href }) => (
             <Link
               key={project.title}
               href={href}
-              className="group w-[86%] shrink-0 snap-start overflow-hidden rounded-2xl border-2 border-[var(--border)] bg-[var(--card)] transition-transform hover:-translate-y-1 sm:w-[58%] lg:w-[46%]"
+              className="group w-[86%] shrink-0 snap-start overflow-hidden rounded-2xl border-2 border-[var(--border)] bg-[var(--card)] transition-transform hover:-translate-y-1 sm:w-[58%] lg:w-[40%]"
             >
               {project.images?.[0] && (
                 <div className="relative aspect-[16/9] overflow-hidden border-b-2 border-[var(--border)]">
@@ -104,14 +102,16 @@ export default function Home() {
                     src={project.images[0].src}
                     alt={project.images[0].alt}
                     fill
-                    sizes="(max-width: 640px) 86vw, 46vw"
-                    className="object-cover transition-transform duration-300 group-hover:scale-[1.02]"
+                    sizes="(max-width: 640px) 86vw, 40vw"
+                    className="object-cover object-top transition-transform duration-300 group-hover:scale-[1.02]"
                   />
                 </div>
               )}
               <div className="p-5">
                 <h3 className="text-lg font-extrabold">{project.title}</h3>
-                <p className="mt-2 text-sm leading-relaxed text-[var(--muted)]">{description}</p>
+                <p className="mt-2 text-sm leading-relaxed text-[var(--muted)]">
+                  {project.summary ?? project.description}
+                </p>
               </div>
             </Link>
           ))}
