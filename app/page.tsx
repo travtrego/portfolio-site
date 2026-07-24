@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import PhotoStrip from "@/components/PhotoStrip";
 import { apps, funStuff, site } from "@/lib/content";
 
 const featuredProjects = [
@@ -81,6 +82,7 @@ export default function Home() {
             <p key={i}>{paragraph}</p>
           ))}
         </div>
+        <PhotoStrip photos={site.photos} accent="var(--accent-apps)" />
       </section>
 
       <section className="mt-12">
