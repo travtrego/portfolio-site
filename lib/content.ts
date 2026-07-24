@@ -1,5 +1,7 @@
 export type Project = {
   title: string;
+  /** One-sentence hook, shown above the full description. */
+  summary?: string;
   description: string;
   github?: string;
   demo?: string;
@@ -31,8 +33,10 @@ export const site = {
 export const apps: Project[] = [
   {
     title: "TCP Mastery — CPA Study App",
+    summary:
+      "An offline-first study app for the CPA exam — adaptive quizzes, a full analytics dashboard, and a built-in tutor, with no backend at all.",
     description:
-      "Built a fully offline-capable Progressive Web App for CPA exam prep (Tax Compliance & Planning) — installable to your home screen, works without a connection, and runs entirely client-side in vanilla HTML/CSS/JavaScript with zero backend or framework. Deployed as a static site on Vercel with custom cache-control headers so service worker and manifest updates roll out immediately instead of going stale. Features an adaptive quiz engine (weak-area drilling, timed mode, custom quizzes, question-of-the-day), a full analytics dashboard (accuracy, streaks, topic breakdowns, weekly heatmap), multi-profile support with JSON backup/restore, and a built-in tutor that explains every question three ways — plain English, step-by-step, and \"why the trap.\"",
+      "Covers the Tax Compliance & Planning discipline. Installable to your home screen, works without a connection, and runs entirely client-side in vanilla HTML/CSS/JavaScript with zero backend or framework. Deployed as a static site on Vercel with custom cache-control headers so service worker and manifest updates roll out immediately instead of going stale. Features an adaptive quiz engine (weak-area drilling, timed mode, custom quizzes, question-of-the-day), a full analytics dashboard (accuracy, streaks, topic breakdowns, weekly heatmap), multi-profile support with JSON backup/restore, and a built-in tutor that explains every question three ways — plain English, step-by-step, and \"why the trap.\"",
     github: "https://github.com/travtrego/-tcp-study-app",
     demo: "https://tcp-study-app.vercel.app/",
     tags: [
@@ -52,18 +56,15 @@ export const apps: Project[] = [
       "Expand past Unit 1 to cover the rest of the TCP discipline",
     ],
   },
-  {
-    title: "More apps",
-    description: "Next slot.",
-    comingSoon: true,
-  },
 ];
 
 export const funStuff: Project[] = [
   {
     title: "Phillies Prospect Pulse",
+    summary:
+      "A self-updating farm-system dashboard with a custom prospect ranking model and a Claude-powered chat assistant that reasons over the live database.",
     description:
-      "A full-stack farm-system dashboard for the Phillies' minor-league prospects. An automated pipeline pulls and reconciles news, stats, promotions, and injuries on a schedule (a daily Vercel cron job snapshots rankings history), feeding a custom weighted ranking model (scouting, performance, age/level, media sentiment, risk) that shows exactly what moved each player's rank, not just a final score. \"Prospect Genie\" is a Claude-powered chat assistant that reasons over the live database to answer natural-language questions about the system — why a player hasn't been promoted, who's trending, head-to-head comparisons. Backed by Supabase, with an automated quality pipeline (data audits, ranking backtests against historical outcomes, and typechecking) run before every deploy.",
+      "An automated pipeline pulls and reconciles news, stats, promotions, and injuries on a schedule (a daily Vercel cron job snapshots rankings history), feeding a custom weighted ranking model (scouting, performance, age/level, media sentiment, risk) that shows exactly what moved each player's rank, not just a final score. \"Prospect Genie\" is a Claude-powered chat assistant that reasons over the live database to answer natural-language questions about the system — why a player hasn't been promoted, who's trending, head-to-head comparisons. Backed by Supabase, with an automated quality pipeline (data audits, ranking backtests against historical outcomes, and typechecking) run before every deploy.",
     github: "https://github.com/travtrego/phillies-prospect-pulse",
     demo: "https://phillies-prospect-pulse-self.vercel.app/",
     tags: [
@@ -86,8 +87,10 @@ export const funStuff: Project[] = [
   },
   {
     title: "MycoFlow",
+    summary:
+      "A mushroom cultivation tracker built on a real phase state machine — every batch followed from grain jar to dried harvest, with an audit trail that can't drift.",
     description:
-      "A mushroom cultivation tracker built around a real phase state machine — every batch moves through grain colonization, break & shake, bulk colonizing, fruiting, drying, and done, with location assignment and dried-weight yields logged at each step. The lab map (shelves and chambers) derives occupancy from each batch's location instead of storing the relationship twice, and every mutating action writes one entry to both the batch's own history and a global activity log in the same call — so the audit trail can't drift out of sync. Next.js + TypeScript on the frontend, Postgres (Neon) on the backend.",
+      "Every batch moves through grain colonization, break & shake, bulk colonizing, fruiting, drying, and done, with location assignment and dried-weight yields logged at each step. The lab map (shelves and chambers) derives occupancy from each batch's location instead of storing the relationship twice, and every mutating action writes one entry to both the batch's own history and a global activity log in the same call — so the audit trail can't drift out of sync. Next.js + TypeScript on the frontend, Postgres (Neon) on the backend.",
     github: "https://github.com/travtrego/MycoFlow",
     tags: ["Next.js", "TypeScript", "Postgres (Neon)", "State machine design", "Data modeling"],
     images: [
@@ -105,8 +108,10 @@ export const funStuff: Project[] = [
 export const dataProjects: Project[] = [
   {
     title: "Digit Recognizer (Kaggle MNIST)",
+    summary:
+      "Three convolutional neural networks built from scratch and tuned to 99.34% accuracy — missing just 66 of 10,000 handwritten digits.",
     description:
-      "Designed and trained three progressively deeper CNNs from scratch in Keras/TensorFlow — stacking Conv2D blocks with batch normalization and dropout, tuning learning rate schedules with EarlyStopping and ReduceLROnPlateau, and diagnosing failures with a full misclassification breakdown. Landed at 99.34% test accuracy, missing just 66 out of 10,000 handwritten digits.",
+      "Built in Keras/TensorFlow across three progressively deeper architectures — stacking Conv2D blocks with batch normalization and dropout, tuning learning rate schedules with EarlyStopping and ReduceLROnPlateau, and diagnosing what the model got wrong with a full misclassification breakdown.",
     github: "https://github.com/travtrego/digit-recognizer",
     tags: [
       "Python",
@@ -126,6 +131,8 @@ export const dataProjects: Project[] = [
   },
   {
     title: "Greenwashing Risk Detector",
+    summary:
+      "Scores airline climate claims 0–5 on how specific and verifiable they are — not on whether they're true.",
     description:
       "A screening model for greenwashing risk in corporate climate claims, built from 2025 sustainability and environmental performance reports from three major airlines. Each claim is scored against five credibility indicators — a stated number, target year, baseline year, emissions scope, and progress evidence — with only the indicators actually applicable to that type of claim counted, so a claim isn't penalized for missing a scope reference it was never expected to have. Claims that back up fewer of their applicable indicators score higher on a 0–5 Greenwashing Risk Score. Built, documented, and presented using Python/pandas pipelines and Next.js/Recharts.",
     github: "https://github.com/travtrego/greenwashing",
@@ -148,8 +155,10 @@ export const dataProjects: Project[] = [
   },
   {
     title: "FSO Risk Explorer",
+    summary:
+      "8,348 risk factors pulled from 49 bank and insurer 10-K filings, then clustered into themes with no labeled training data.",
     description:
-      "Unsupervised clustering of risk factor language across 49 large US financial services companies, built from their 2025 Form 10-K filings. Each company's \"Item 1A. Risk Factors\" section is scraped from SEC EDGAR, split into 8,348 individual risk statements, vectorized with TF-IDF, and grouped into 12 clusters with K-means — 6 of which turned out to be genuine, business-model-aligned risk themes (Bank Capital & Liquidity, Cybersecurity & Data, Regulatory & Privacy, and others), rediscovering the industry's risk taxonomy without any labeled training data. Built as a clean, documented, reproducible pipeline, plus a Next.js/Recharts dashboard for exploring the results by sub-sector and by company.",
+      "Each company's \"Item 1A. Risk Factors\" section is scraped from SEC EDGAR, split into individual risk statements, vectorized with TF-IDF, and grouped into 12 clusters with K-means — 6 of which turned out to be genuine, business-model-aligned risk themes (Bank Capital & Liquidity, Cybersecurity & Data, Regulatory & Privacy, and others), rediscovering the industry's risk taxonomy without any labeled training data. Built as a clean, documented, reproducible pipeline, plus a Next.js/Recharts dashboard for exploring the results by sub-sector and by company.",
     github: "https://github.com/travtrego/fso-risk-explorer",
     tags: [
       "Python / pandas",
@@ -171,10 +180,4 @@ export const dataProjects: Project[] = [
   },
 ];
 
-export const productivityProjects: Project[] = [
-  {
-    title: "More productivity experiments",
-    description: "In progress.",
-    comingSoon: true,
-  },
-];
+export const productivityProjects: Project[] = [];

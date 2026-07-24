@@ -17,6 +17,11 @@ export default function ProjectCard({ project, accent }: { project: Project; acc
           </span>
         )}
       </div>
+      {project.summary && (
+        <p className="mt-2 text-[15px] font-semibold leading-snug text-[var(--foreground)]">
+          {project.summary}
+        </p>
+      )}
       <p className="mt-2 text-sm text-[var(--muted)]">{project.description}</p>
       {(project.github || project.demo) && (
         <div className="mt-4 flex flex-wrap gap-2">
@@ -64,7 +69,7 @@ export default function ProjectCard({ project, accent }: { project: Project; acc
               <p className="text-xs font-medium uppercase tracking-wide text-[var(--muted)]">
                 Areas for improvement
               </p>
-              <ul className="mt-2 list-inside list-disc space-y-1 text-sm text-[var(--muted)]">
+              <ul className="mt-2 list-disc space-y-1 pl-5 text-sm text-[var(--muted)]">
                 {project.improvements.map((item) => (
                   <li key={item}>{item}</li>
                 ))}
@@ -74,7 +79,7 @@ export default function ProjectCard({ project, accent }: { project: Project; acc
           {project.nextSteps && project.nextSteps.length > 0 && (
             <div>
               <p className="text-xs font-medium uppercase tracking-wide text-[var(--muted)]">What&apos;s next</p>
-              <ul className="mt-2 list-inside list-disc space-y-1 text-sm text-[var(--muted)]">
+              <ul className="mt-2 list-disc space-y-1 pl-5 text-sm text-[var(--muted)]">
                 {project.nextSteps.map((item) => (
                   <li key={item}>{item}</li>
                 ))}
@@ -93,9 +98,9 @@ export default function ProjectCard({ project, accent }: { project: Project; acc
           key={image.src}
           type="button"
           onClick={() => setLightbox(image)}
-          className="group relative h-24 flex-1 cursor-zoom-in overflow-hidden rounded-lg border-2 border-[var(--border)] bg-[var(--background)] sm:h-28 sm:flex-none sm:w-full"
+          className="group relative h-28 flex-1 cursor-zoom-in overflow-hidden rounded-lg border-2 border-[var(--border)] bg-[var(--background)] sm:h-32 sm:flex-none sm:w-full"
         >
-          <Image src={image.src} alt={image.alt} fill sizes="208px" className="object-contain" />
+          <Image src={image.src} alt={image.alt} fill sizes="208px" className="object-cover object-top" />
           <span className="absolute inset-0 flex items-center justify-center bg-black/0 opacity-0 transition-all group-hover:bg-black/40 group-hover:opacity-100">
             <svg
               xmlns="http://www.w3.org/2000/svg"

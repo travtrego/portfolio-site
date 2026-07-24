@@ -23,11 +23,15 @@ export default function ProjectGrid({
         </h1>
         <p className="mt-2 text-[var(--muted)]">{description}</p>
       </div>
-      <div className="mt-8 grid gap-4">
-        {projects.map((project) => (
-          <ProjectCard key={project.title} project={project} accent={accent} />
-        ))}
-      </div>
+      {projects.length > 0 ? (
+        <div className="mt-8 grid gap-4">
+          {projects.map((project) => (
+            <ProjectCard key={project.title} project={project} accent={accent} />
+          ))}
+        </div>
+      ) : (
+        <p className="mt-8 text-[var(--muted)]">Nothing here yet — first project is in the works.</p>
+      )}
     </main>
   );
 }
