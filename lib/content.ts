@@ -19,12 +19,6 @@ export const site = {
   bio: [
     "Navy veteran, Electronic Warfare Operator, deployed across the Middle East and North Africa. Still dealing with the PTSD that came home with me. Building things is one of the ways I manage it.",
   ],
-  photos: [
-    { src: "/photos/wedding-kiss.jpg", alt: "Wedding day" },
-    { src: "/photos/body-armor-selfie.jpg", alt: "Geared up on deployment" },
-    { src: "/photos/dog-belly-rub.jpg", alt: "Belly rubs for the dog" },
-    { src: "/photos/dog-blanket.jpg", alt: "The dog, unbothered" },
-  ],
 };
 
 export const apps: Project[] = [

@@ -35,22 +35,20 @@ export default function Home() {
         </p>
       </section>
 
-      <section className="mt-8 grid grid-cols-2 gap-4 sm:grid-cols-4">
-        {site.photos.map((photo) => (
-          <div
-            key={photo.src}
-            className="relative aspect-square overflow-hidden rounded-2xl border-2 bg-[var(--card)] transition-transform hover:-translate-y-1"
-            style={{ borderColor: "var(--accent)" }}
-          >
-            <Image
-              src={photo.src}
-              alt={photo.alt}
-              fill
-              sizes="(max-width: 640px) 50vw, 33vw"
-              className="object-cover"
-            />
-          </div>
-        ))}
+      <section className="mt-8">
+        <div
+          className="relative aspect-[4/3] overflow-hidden rounded-2xl border-2 bg-[var(--card)] sm:aspect-[16/9]"
+          style={{ borderColor: "var(--accent)" }}
+        >
+          <Image
+            src="/hero/walrus.jpg"
+            alt="A walrus working on a laptop on a rocky beach, waterfall behind him"
+            fill
+            priority
+            sizes="(max-width: 896px) 100vw, 896px"
+            className="object-cover"
+          />
+        </div>
       </section>
 
       <section
