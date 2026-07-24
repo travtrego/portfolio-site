@@ -15,23 +15,23 @@ export default function Home() {
             Navy veteran, husband, and dog dad, currently teaching myself how to build with AI.
           </p>
           <p className="mt-5 text-lg leading-relaxed">
-            Mostly I build things I wanted to exist: an{" "}
+            Mostly I build things I wanted to exist:{" "}
             <Link href="/apps" className="font-semibold underline decoration-2 underline-offset-4" style={{ color: "var(--accent-apps)" }}>
-              app
+              apps
             </Link>{" "}
-            for grinding through the CPA exam,{" "}
+            for problems I kept running into,{" "}
             <Link href="/fun-stuff" className="font-semibold underline decoration-2 underline-offset-4" style={{ color: "var(--accent-fun)" }}>
               side projects
             </Link>{" "}
-            for following Phillies prospects and running a mushroom lab, and{" "}
+            for the hobbies I can&apos;t stop tinkering with, and{" "}
             <Link href="/data-projects" className="font-semibold underline decoration-2 underline-offset-4" style={{ color: "var(--accent-data)" }}>
               data projects
             </Link>{" "}
-            that taught me Python and machine learning.{" "}
+            I&apos;m using to teach myself analytics and machine learning.{" "}
             <Link href="/productivity" className="font-semibold underline decoration-2 underline-offset-4" style={{ color: "var(--accent-productivity)" }}>
               Accounting tools
             </Link>{" "}
-            are next.
+            for the day job are next.
           </p>
         </div>
 
