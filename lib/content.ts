@@ -64,7 +64,7 @@ export const funStuff: Project[] = [
     summary:
       "A self-updating farm-system dashboard with a custom prospect ranking model and a Claude-powered chat assistant that reasons over the live database.",
     description:
-      "An automated pipeline pulls and reconciles news, stats, promotions, and injuries on a schedule (a daily Vercel cron job snapshots rankings history), feeding a custom weighted ranking model (scouting, performance, age/level, media sentiment, risk) that shows exactly what moved each player's rank, not just a final score. \"Prospect Genie\" is a Claude-powered chat assistant that reasons over the live database to answer natural-language questions about the system — why a player hasn't been promoted, who's trending, head-to-head comparisons. Backed by Supabase, with an automated quality pipeline (data audits, ranking backtests against historical outcomes, and typechecking) run before every deploy.",
+      "An automated pipeline pulls and reconciles news, stats, promotions, and injuries on a schedule, feeding a custom weighted ranking model (scouting, performance, age/level, media sentiment, risk) that shows exactly what moved each player's rank. \"Prospect Genie\" is a Claude-powered chat assistant that reasons over the live database to answer natural-language questions about the system — why a player hasn't been promoted, who's trending, head-to-head comparisons. Uses Supabase, and an automated quality pipeline (data audits, ranking backtests against historical outcomes, and typechecking) that runs before every deploy.",
     github: "https://github.com/travtrego/phillies-prospect-pulse",
     demo: "https://phillies-prospect-pulse-self.vercel.app/",
     tags: [
