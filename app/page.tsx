@@ -6,7 +6,7 @@ import { site } from "@/lib/content";
 export default function Home() {
   return (
     <main className="mx-auto max-w-4xl px-6 py-12">
-      <section className="grid items-center gap-8 sm:grid-cols-[1.15fr_1fr]">
+      <section className="grid items-center gap-8 sm:grid-cols-[1fr_1.3fr]">
         <div>
           <h1 className="text-4xl font-extrabold sm:text-5xl" style={{ color: "var(--accent)" }}>
             {site.name}
@@ -15,23 +15,23 @@ export default function Home() {
             Navy veteran, husband, and dog dad, currently teaching myself how to build with AI.
           </p>
           <p className="mt-5 text-lg leading-relaxed">
-            Mostly I build things I wanted to exist:{" "}
+            Mostly I build things impulsively:{" "}
             <Link href="/apps" className="font-semibold underline decoration-2 underline-offset-4" style={{ color: "var(--accent-apps)" }}>
               apps
-            </Link>{" "}
-            for problems I kept running into,{" "}
+            </Link>
+            ,{" "}
             <Link href="/fun-stuff" className="font-semibold underline decoration-2 underline-offset-4" style={{ color: "var(--accent-fun)" }}>
               side projects
             </Link>{" "}
-            for the hobbies I can&apos;t stop tinkering with, and{" "}
+            for hobbies,{" "}
             <Link href="/data-projects" className="font-semibold underline decoration-2 underline-offset-4" style={{ color: "var(--accent-data)" }}>
               data projects
             </Link>{" "}
-            I&apos;m using to teach myself analytics and machine learning.{" "}
+            to learn... and{" "}
             <Link href="/productivity" className="font-semibold underline decoration-2 underline-offset-4" style={{ color: "var(--accent-productivity)" }}>
-              Accounting tools
-            </Link>{" "}
-            for the day job are next.
+              ideas to improve productivity
+            </Link>
+            .
           </p>
         </div>
 
@@ -43,7 +43,7 @@ export default function Home() {
             alt="A walrus working on a laptop on a rocky beach, waterfall behind him"
             fill
             priority
-            sizes="(max-width: 640px) 100vw, 380px"
+            sizes="(max-width: 640px) 100vw, 480px"
             className="object-cover"
           />
         </div>
