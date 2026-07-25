@@ -78,7 +78,7 @@ export default function ProjectCard({ project, accent }: { project: Project; acc
           )}
           {project.nextSteps && project.nextSteps.length > 0 && (
             <div>
-              <p className="text-xs font-medium uppercase tracking-wide text-[var(--muted)]">What&apos;s next</p>
+              <p className="text-xs font-medium uppercase tracking-wide text-[var(--muted)]">Opportunities to learn</p>
               <ul className="mt-2 list-disc space-y-1 pl-5 text-sm text-[var(--muted)]">
                 {project.nextSteps.map((item) => (
                   <li key={item}>{item}</li>

@@ -32,11 +32,11 @@ export const site = {
 
 export const apps: Project[] = [
   {
-    title: "TCP Mastery — CPA Study App",
+    title: "CPA Study App",
     summary:
-      "An offline-first study app for the CPA exam — adaptive quizzes, a full analytics dashboard, and a built-in tutor, with no backend at all.",
+      "An offline-first study app for CPA exam prep — adaptive quizzes, a full analytics dashboard, and a built-in tutor, with no backend at all.",
     description:
-      "Covers the Tax Compliance & Planning discipline. Installable to your home screen, works without a connection, and runs entirely client-side in vanilla HTML/CSS/JavaScript with zero backend or framework. Deployed as a static site on Vercel with custom cache-control headers so service worker and manifest updates roll out immediately instead of going stale. Features an adaptive quiz engine (weak-area drilling, timed mode, custom quizzes, question-of-the-day), a full analytics dashboard (accuracy, streaks, topic breakdowns, weekly heatmap), multi-profile support with JSON backup/restore, and a built-in tutor that explains every question three ways — plain English, step-by-step, and \"why the trap.\"",
+      "Installable and works without a connection, running entirely client-side in vanilla HTML/CSS/JavaScript with zero backend or framework. Deployed as a static site on Vercel with custom cache-control headers so service worker and manifest updates roll out immediately instead of going stale. Features an adaptive quiz engine (weak-area drilling, timed mode, custom quizzes, question-of-the-day), a full analytics dashboard (accuracy, streaks, topic breakdowns, weekly heatmap), multi-profile support with JSON backup/restore, and a built-in tutor that explains every question three ways — plain English, step-by-step, and \"why the trap.\"",
     github: "https://github.com/travtrego/-tcp-study-app",
     demo: "https://tcp-study-app.vercel.app/",
     tags: [
@@ -47,13 +47,13 @@ export const apps: Project[] = [
       "Client-side state & analytics",
     ],
     images: [
-      { src: "/projects/tcp-mastery/home.png", alt: "Unit 1 course home and daily study plan" },
+      { src: "/projects/tcp-mastery/home.png", alt: "Course home and daily study plan" },
       { src: "/projects/tcp-mastery/quiz.png", alt: "Practice quiz with answer feedback" },
       { src: "/projects/tcp-mastery/stats.png", alt: "Analytics dashboard with topic accuracy and study heatmap" },
     ],
     nextSteps: [
-      "Wire up a live AI tutor (the app currently flags this as the next step beyond its built-in explanations)",
-      "Expand past Unit 1 to cover the rest of the TCP discipline",
+      "Wire up a live AI tutor beyond the built-in explanations",
+      "Expand coverage across the rest of the CPA exam",
     ],
   },
 ];
