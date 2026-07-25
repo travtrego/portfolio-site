@@ -52,8 +52,8 @@ export const apps: Project[] = [
       { src: "/projects/tcp-mastery/stats.png", alt: "Analytics dashboard with topic accuracy and study heatmap" },
     ],
     nextSteps: [
-      "Add TypeScript to the vanilla JS codebase to catch bugs the runtime currently can't",
-      "Wire up a real LLM API (streaming responses, prompt design) for the built-in tutor instead of static explanations",
+      "Having built state management from scratch in vanilla JS, a future project could compare how a framework like React handles the same problem",
+      "Now that offline-first caching works end to end, a future app could add real-time sync across devices once there's an actual backend",
     ],
   },
 ];
@@ -81,8 +81,8 @@ export const funStuff: Project[] = [
       { src: "/projects/prospect-pulse/genie.png", alt: "Prospect Genie AI chat assistant" },
     ],
     nextSteps: [
-      "Build \"Ask Pulse\" as a natural-language-to-SQL layer — a practical intro to retrieval-augmented generation patterns",
-      "Learn basic optimization (grid search, gradient-free tuning) to feed backtest results back into the ranking model's weights",
+      "Having built a Claude assistant that reasons over a live database here, a future project could give it real tool-use / function-calling instead of read-only context",
+      "Now that a full backtesting pipeline exists, a future project could swap the weighted ranking formula for a trained model and compare the two",
     ],
   },
   {
@@ -99,8 +99,8 @@ export const funStuff: Project[] = [
       { src: "/projects/mycoflow/locations.png", alt: "Lab map showing shelf and chamber occupancy" },
     ],
     nextSteps: [
-      "Learn object storage (Vercel Blob, S3) to attach a photo to each flush and build a visual harvest log",
-      "Pick up basic time-series analysis to chart yield trends per species as more history accumulates",
+      "Having modeled a real phase state machine here, that same pattern is reusable for any workflow-tracking app, not just cultivation",
+      "Now that the audit-log pattern (one write, two tables, always in sync) is proven out, future projects can reuse it anywhere mutations need a paper trail",
     ],
   },
 ];
@@ -125,8 +125,8 @@ export const dataProjects: Project[] = [
       { src: "/projects/digit-recognizer/misclassified.png", alt: "Misclassified test digits" },
     ],
     nextSteps: [
-      "Learn model deployment by serving the trained network through a web API or TensorFlow.js for a live drawing demo",
-      "Practice data augmentation to generalize past clean, centered MNIST digits to messier real-world handwriting",
+      "Having trained CNNs from scratch here, a future project could start from a pretrained model and compare transfer learning against training from zero",
+      "Now that the misclassification-analysis workflow exists, the same diagnostic approach could be reused on a harder, noisier dataset",
     ],
   },
   {
@@ -149,8 +149,8 @@ export const dataProjects: Project[] = [
       { src: "/projects/greenwashing/methodology.png", alt: "Methodology page detailing the scoring formula and credibility indicators" },
     ],
     nextSteps: [
-      "Get hands-on with deployment and CI/CD by shipping the dashboard live instead of screenshots",
-      "Explore embedding-based semantic similarity as a step beyond rule-based scoring, to generalize past airlines",
+      "Having built a rule-based scoring pipeline here, a future project could compare it against an embeddings-based approach on the same claims",
+      "Now that the credibility-indicator framework works for airlines, the same scoring approach could be pointed at a completely different industry's disclosures",
     ],
   },
   {
@@ -174,8 +174,8 @@ export const dataProjects: Project[] = [
       { src: "/projects/fso-risk-explorer/company-explorer.png", alt: "Per-company risk category breakdown and statement table" },
     ],
     nextSteps: [
-      "Practice CI/CD by deploying the dashboard live rather than working from screenshots",
-      "Sharpen document-parsing skills on edge cases like Wells Fargo's incorporate-by-reference 10-K",
+      "Having built a TF-IDF + K-means clustering pipeline here, a future project could compare it against topic modeling (LDA) or embedding-based clustering on the same data",
+      "Now that the SEC EDGAR scraping pattern exists, it's reusable for pulling any other structured section out of a 10-K, not just risk factors",
     ],
   },
 ];
