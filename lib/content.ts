@@ -52,8 +52,8 @@ export const apps: Project[] = [
       { src: "/projects/tcp-mastery/stats.png", alt: "Analytics dashboard with topic accuracy and study heatmap" },
     ],
     nextSteps: [
-      "Wire up a live AI tutor beyond the built-in explanations",
-      "Expand coverage across the rest of the CPA exam",
+      "Add TypeScript to the vanilla JS codebase to catch bugs the runtime currently can't",
+      "Wire up a real LLM API (streaming responses, prompt design) for the built-in tutor instead of static explanations",
     ],
   },
 ];
@@ -81,8 +81,8 @@ export const funStuff: Project[] = [
       { src: "/projects/prospect-pulse/genie.png", alt: "Prospect Genie AI chat assistant" },
     ],
     nextSteps: [
-      "Wire up \"Ask Pulse,\" a scaffolded natural-language query page, to answer directly against the live database",
-      "Feed backtest results back into the ranking model to tune its weights over time",
+      "Build \"Ask Pulse\" as a natural-language-to-SQL layer — a practical intro to retrieval-augmented generation patterns",
+      "Learn basic optimization (grid search, gradient-free tuning) to feed backtest results back into the ranking model's weights",
     ],
   },
   {
@@ -99,8 +99,8 @@ export const funStuff: Project[] = [
       { src: "/projects/mycoflow/locations.png", alt: "Lab map showing shelf and chamber occupancy" },
     ],
     nextSteps: [
-      "Add photos per flush to build a visual harvest log over time",
-      "Surface simple yield trends per species once there's enough history",
+      "Learn object storage (Vercel Blob, S3) to attach a photo to each flush and build a visual harvest log",
+      "Pick up basic time-series analysis to chart yield trends per species as more history accumulates",
     ],
   },
 ];
@@ -125,8 +125,8 @@ export const dataProjects: Project[] = [
       { src: "/projects/digit-recognizer/misclassified.png", alt: "Misclassified test digits" },
     ],
     nextSteps: [
-      "Build an interactive demo — draw a digit, get a live prediction",
-      "Test it against messier real-world handwriting, not just clean/centered MNIST digits",
+      "Learn model deployment by serving the trained network through a web API or TensorFlow.js for a live drawing demo",
+      "Practice data augmentation to generalize past clean, centered MNIST digits to messier real-world handwriting",
     ],
   },
   {
@@ -149,8 +149,8 @@ export const dataProjects: Project[] = [
       { src: "/projects/greenwashing/methodology.png", alt: "Methodology page detailing the scoring formula and credibility indicators" },
     ],
     nextSteps: [
-      "Deploy the dashboard so the live version isn't just screenshots",
-      "Extend the credibility-indicator model beyond airlines to other high-emitting industries",
+      "Get hands-on with deployment and CI/CD by shipping the dashboard live instead of screenshots",
+      "Explore embedding-based semantic similarity as a step beyond rule-based scoring, to generalize past airlines",
     ],
   },
   {
@@ -174,8 +174,8 @@ export const dataProjects: Project[] = [
       { src: "/projects/fso-risk-explorer/company-explorer.png", alt: "Per-company risk category breakdown and statement table" },
     ],
     nextSteps: [
-      "Deploy the dashboard so the live version isn't just screenshots",
-      "Recover Wells Fargo's risk factors, which are incorporated by reference rather than included directly in its 10-K",
+      "Practice CI/CD by deploying the dashboard live rather than working from screenshots",
+      "Sharpen document-parsing skills on edge cases like Wells Fargo's incorporate-by-reference 10-K",
     ],
   },
 ];
