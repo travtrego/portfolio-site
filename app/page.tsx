@@ -29,7 +29,7 @@ export default function Home() {
             </Link>{" "}
             to learn... and{" "}
             <Link href="/productivity" className="font-semibold underline decoration-2 underline-offset-4" style={{ color: "var(--accent-productivity)" }}>
-              ideas to improve productivity
+              tools to improve my day-to-day productivity
             </Link>
             .
           </p>
