@@ -62,33 +62,34 @@ export default function ProjectCard({ project, accent }: { project: Project; acc
           ))}
         </div>
       )}
-      {(project.improvements || project.nextSteps) && (
-        <div className="mt-4 grid gap-4 sm:grid-cols-2">
-          {project.improvements && project.improvements.length > 0 && (
-            <div>
-              <p className="text-xs font-medium uppercase tracking-wide text-[var(--muted)]">
-                Areas for improvement
-              </p>
-              <ul className="mt-2 list-disc space-y-1 pl-5 text-sm text-[var(--muted)]">
-                {project.improvements.map((item) => (
-                  <li key={item}>{item}</li>
-                ))}
-              </ul>
-            </div>
-          )}
-          {project.nextSteps && project.nextSteps.length > 0 && (
-            <div>
-              <p className="text-xs font-medium uppercase tracking-wide text-[var(--muted)]">Opportunities to learn</p>
-              <ul className="mt-2 list-disc space-y-1 pl-5 text-sm text-[var(--muted)]">
-                {project.nextSteps.map((item) => (
-                  <li key={item}>{item}</li>
-                ))}
-              </ul>
-            </div>
-          )}
+    </>
+  );
+
+  const learnContent = (project.improvements || project.nextSteps) && (
+    <div className="mt-4 grid gap-4 sm:grid-cols-2">
+      {project.improvements && project.improvements.length > 0 && (
+        <div>
+          <p className="text-xs font-medium uppercase tracking-wide text-[var(--muted)]">
+            Areas for improvement
+          </p>
+          <ul className="mt-2 list-disc space-y-1 pl-5 text-sm text-[var(--muted)]">
+            {project.improvements.map((item) => (
+              <li key={item}>{item}</li>
+            ))}
+          </ul>
         </div>
       )}
-    </>
+      {project.nextSteps && project.nextSteps.length > 0 && (
+        <div>
+          <p className="text-xs font-medium uppercase tracking-wide text-[var(--muted)]">Opportunities to learn</p>
+          <ul className="mt-2 list-disc space-y-1 pl-5 text-sm text-[var(--muted)]">
+            {project.nextSteps.map((item) => (
+              <li key={item}>{item}</li>
+            ))}
+          </ul>
+        </div>
+      )}
+    </div>
   );
 
   const imageContent = project.images && project.images.length > 0 && (
@@ -124,10 +125,13 @@ export default function ProjectCard({ project, accent }: { project: Project; acc
   );
 
   const content = (
-    <div className="sm:flex sm:items-start sm:gap-6">
-      <div className="min-w-0 flex-1">{textContent}</div>
-      {imageContent}
-    </div>
+    <>
+      <div className="sm:flex sm:items-start sm:gap-6">
+        <div className="min-w-0 flex-1">{textContent}</div>
+        {imageContent}
+      </div>
+      {learnContent}
+    </>
   );
 
   return (
