@@ -56,6 +56,32 @@ export const apps: Project[] = [
       "Now that offline-first caching works end to end, a future app could add real-time sync across devices once there's an actual backend",
     ],
   },
+  {
+    title: "Doorstop",
+    summary:
+      "A pre-leave checklist app — swipe through stove, locks, and garage before you walk out the door, with streaks and cross-device sync.",
+    description:
+      "Set up a checklist once (stove off, garage closed, doors locked...) and swipe through it every time you leave, like a pre-flight check for the house. Each item is a full-screen card — swipe right to confirm, left to flag it for a second look. Supports multiple profiles (\"Leaving for work\" vs. \"Leaving for vacation\", each its own ordered subset of items), a streak and history log, and accounts with row-level-security-scoped Supabase sync so the same checklists show up on every device. Also includes an honestly-scoped location nudge: while the app is open it can flag that you've left home without checking in today, clearly labeled as foreground-only, since a browser tab can't watch location in the background the way a native app could.",
+    github: "https://github.com/travtrego/Doorstop",
+    tags: [
+      "React",
+      "TypeScript",
+      "Vite",
+      "Tailwind CSS",
+      "Framer Motion (gestures)",
+      "PWA / offline support",
+      "Supabase (Postgres, Auth, Realtime)",
+    ],
+    images: [
+      { src: "/projects/doorstop/home.png", alt: "Home screen with active streak and checklist profiles" },
+      { src: "/projects/doorstop/session.png", alt: "Swipe-to-confirm card mid-checklist" },
+      { src: "/projects/doorstop/account.png", alt: "Account settings with the foreground-only geofence nudge" },
+    ],
+    nextSteps: [
+      "Having built a foreground-only geofence nudge here, a future project could explore a native wrapper (Capacitor, React Native) to get real background location",
+      "Now that Supabase realtime sync (postgres_changes) works end to end, a future project could reuse the same pattern for any multi-device app that needs live sync",
+    ],
+  },
 ];
 
 export const funStuff: Project[] = [
