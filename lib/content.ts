@@ -14,7 +14,7 @@ export type Project = {
 
 export const site = {
   name: "Travis Sherman Trego",
-  tagline: "Navy veteran, husband, and dog dad, currently teaching myself AI and how to build things.",
+  tagline: "Navy veteran, tax accountant, husband, and dog dad, currently teaching myself AI and how to build things.",
   about: [
     "I work in accounting. A few required training modules on AI turned into a real interest in Python and building things. This site is where that interest turns into actual projects — hobby apps, data analytics I'm still learning, and tools aimed at making accounting work less painful.",
   ],

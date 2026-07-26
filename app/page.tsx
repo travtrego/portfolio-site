@@ -12,7 +12,7 @@ export default function Home() {
             {site.name}
           </h1>
           <p className="mt-4 text-lg leading-relaxed text-[var(--muted)]">
-            Navy veteran, husband, and dog dad, currently teaching myself how to build with AI.
+            Navy veteran, tax accountant, husband, and dog dad, currently teaching myself how to build with AI.
           </p>
           <p className="mt-5 text-lg leading-relaxed">
             Mostly I build things impulsively:{" "}
