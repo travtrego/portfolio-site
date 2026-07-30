@@ -4,8 +4,8 @@ import { productivityProjects } from "@/lib/content";
 export default function ProductivityPage() {
   return (
     <ProjectGrid
-      title="Productivity"
-      description="Accounting and productivity tools I've built."
+      title="Current Projects"
+      description="What I'm building right now."
       projects={productivityProjects}
       accent="var(--accent-productivity)"
     />
