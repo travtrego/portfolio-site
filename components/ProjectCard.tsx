@@ -137,7 +137,7 @@ export default function ProjectCard({ project, accent }: { project: Project; acc
   return (
     <>
       {project.comingSoon ? (
-        <div className="rounded-2xl border-2 border-dashed border-[var(--border)] bg-[var(--card)] p-5 opacity-70">
+        <div className="rounded-2xl border-2 border-dashed border-[var(--border)] bg-[var(--card)] p-5">
           {content}
         </div>
       ) : (

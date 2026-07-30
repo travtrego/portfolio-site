@@ -206,4 +206,29 @@ export const dataProjects: Project[] = [
   },
 ];
 
-export const productivityProjects: Project[] = [];
+export const productivityProjects: Project[] = [
+  {
+    title: "Guided Visualization",
+    summary:
+      "An app that writes an original guided visualization for you every session — no recordings, grounded in real anxiety and PTSD techniques, not just meditation.",
+    description:
+      "Text pipeline is built and wired to Claude, with six session templates each validated against a hand-written exemplar. Audio narration is next.",
+    tags: ["Claude API (Anthropic SDK)", "Prompt engineering", "Audio-first UX"],
+    images: [
+      { src: "/projects/mindfulness/intro.png", alt: "App intro screen for the guided visualization prototype" },
+    ],
+    comingSoon: true,
+  },
+  {
+    title: "NOAA Right Whale Classifier",
+    summary:
+      "A planned computer-vision project to identify individual North Atlantic right whales from aerial photos, using NOAA's Kaggle recognition dataset.",
+    description:
+      "Researchers already track right whales individually by the unique callosity patterns on their heads. The idea: fine-tune a CNN on that same identification task and see how close a from-scratch model gets.",
+    tags: ["Python", "Computer vision", "CNN / transfer learning", "Kaggle dataset"],
+    images: [
+      { src: "/projects/right-whale-classifier/whale.png", alt: "Illustration of a right whale, marking its head callosities" },
+    ],
+    comingSoon: true,
+  },
+];
