@@ -17,19 +17,19 @@ export default function Home() {
           <p className="mt-5 text-lg leading-relaxed">
             Mostly I build things impulsively:{" "}
             <Link href="/apps" className="font-semibold underline decoration-2 underline-offset-4" style={{ color: "var(--accent-apps)" }}>
-              apps
+              productivity tools
             </Link>
             ,{" "}
             <Link href="/fun-stuff" className="font-semibold underline decoration-2 underline-offset-4" style={{ color: "var(--accent-fun)" }}>
-              side projects
-            </Link>{" "}
-            for hobbies,{" "}
+              projects for hobbies
+            </Link>
+            ,{" "}
             <Link href="/data-projects" className="font-semibold underline decoration-2 underline-offset-4" style={{ color: "var(--accent-data)" }}>
-              data projects
-            </Link>{" "}
-            to learn... and{" "}
+              data science models
+            </Link>
+            ... and{" "}
             <Link href="/productivity" className="font-semibold underline decoration-2 underline-offset-4" style={{ color: "var(--accent-productivity)" }}>
-              whatever I&apos;m building right now
+              whatever&apos;s got me scatterbrained this week
             </Link>
             .
           </p>
