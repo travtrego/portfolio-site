@@ -234,9 +234,9 @@ export const productivityProjects: Project[] = [
   {
     title: "Cold War Multi-Agent Simulator",
     summary:
-      "A Cold War intelligence simulator built to learn how multi-agent AI systems are designed, coordinated, and evaluated — not a game that happens to use AI.",
+      "A multi-agent orchestration system for studying how specialized AI agents coordinate, using a Cold War intelligence scenario as the test harness.",
     description:
-      "Six agents — a Chief Agent plus specialists in submarine, radar/signals, aircraft, field, and counterintelligence — each work a defined information silo and report only to the Chief, which resolves contradictions, assigns follow-ups, and briefs the human director for final sign-off. A post-mission debrief exposes duplicated work, dropped context, or missed follow-ups.",
+      "Six agents operate in isolated information silos — submarine, radar/signals, aircraft, field, and counterintelligence — and report only to a Chief Agent, which resolves contradictions, routes follow-up tasks, and synthesizes a final briefing for human sign-off. Every agent's inputs, instructions, and outputs are inspectable, and a post-mission debrief surfaces failure modes like duplicated work, dropped context, or missed follow-ups.",
     tags: ["Multi-agent orchestration", "Claude API (Anthropic SDK)", "Context management", "Human-in-the-loop design"],
     images: [
       { src: "/projects/cold-war-simulator/periscope.png", alt: "Illustration of a submarine periscope and radar screen" },
