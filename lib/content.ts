@@ -210,7 +210,7 @@ export const productivityProjects: Project[] = [
   {
     title: "Guided Visualization",
     summary:
-      "An app that writes an original guided visualization every session — no recordings, grounded in real techniques used to treat anxiety and PTSD, not just meditation.",
+      "An app that writes an original guided visualization every session, choosing from six generation templates — from calming pre-competition nerves to winding down for sleep. Nothing is pre-recorded; each one is generated fresh, built to feel like a memory, not a script.",
     description:
       "Text pipeline is built and wired to Claude, with six session templates each validated against a hand-written exemplar. Audio narration is next.",
     tags: ["Claude API (Anthropic SDK)", "Prompt engineering", "Audio-first UX"],
