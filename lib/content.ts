@@ -210,7 +210,7 @@ export const productivityProjects: Project[] = [
   {
     title: "Guided Visualization",
     summary:
-      "An app that writes an original guided visualization every session — no recordings, grounded in real anxiety and PTSD techniques, not just meditation.",
+      "An app that writes an original guided visualization every session — no recordings, grounded in real techniques used to treat anxiety and PTSD, not just meditation.",
     description:
       "Text pipeline is built and wired to Claude, with six session templates each validated against a hand-written exemplar. Audio narration is next.",
     tags: ["Claude API (Anthropic SDK)", "Prompt engineering", "Audio-first UX"],
@@ -234,9 +234,9 @@ export const productivityProjects: Project[] = [
   {
     title: "Cold War Multi-Agent Simulator",
     summary:
-      "A multi-agent orchestration system for studying how specialized AI agents coordinate, using a Cold War intelligence scenario as the test harness.",
+      "A multi-agent orchestration system built to study how specialized AI agents coordinate, evaluated through a Cold War intelligence scenario.",
     description:
-      "Six agents operate in isolated information silos — submarine, radar/signals, aircraft, field, and counterintelligence — and report only to a Chief Agent, which resolves contradictions, routes follow-up tasks, and synthesizes a final briefing for human sign-off. Every agent's inputs, instructions, and outputs are inspectable, and a post-mission debrief surfaces failure modes like duplicated work, dropped context, or missed follow-ups.",
+      "Six specialist agents, each confined to an isolated information silo — submarine, radar and signals, aircraft, field, and counterintelligence — report exclusively to a Chief Agent, which resolves contradictions, routes follow-up tasks, and synthesizes a final briefing for human sign-off. Every agent's inputs, instructions, and outputs remain inspectable, and a structured post-mission debrief surfaces failure modes such as duplicated work, dropped context, and missed follow-ups.",
     tags: ["Multi-agent orchestration", "Claude API (Anthropic SDK)", "Context management", "Human-in-the-loop design"],
     images: [
       { src: "/projects/cold-war-simulator/periscope.png", alt: "Illustration of a submarine periscope and radar screen" },
