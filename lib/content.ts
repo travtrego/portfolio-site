@@ -227,7 +227,7 @@ export const productivityProjects: Project[] = [
       "Researchers already track right whales individually by the unique callosity patterns on their heads. The idea: fine-tune a CNN on that same identification task and see how close a from-scratch model gets.",
     tags: ["Python", "Computer vision", "CNN / transfer learning", "Image classification"],
     images: [
-      { src: "/projects/right-whale-classifier/whale.png", alt: "Illustration of a right whale, marking its head callosities" },
+      { src: "/projects/right-whale-classifier/whale-photo.jpg", alt: "A North Atlantic right whale underwater, its head callosities visible, with a diver for scale" },
     ],
     comingSoon: true,
   },
