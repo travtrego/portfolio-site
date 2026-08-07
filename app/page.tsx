@@ -14,6 +14,9 @@ export default function Home() {
           <p className="mt-4 text-lg leading-relaxed text-[var(--muted)]">
             Navy veteran, tax accountant, husband, and dog dad, currently teaching myself how to build with AI.
           </p>
+          <p className="mt-3 text-lg leading-relaxed text-[var(--muted)]">
+            A few required training courses at work turned into teaching myself Python, web development, databases, and automation — building real things instead of just reading about them.
+          </p>
           <ul className="mt-5 space-y-2 text-lg leading-relaxed">
             <li>
               <Link href="/helpful-apps" className="font-semibold underline decoration-2 underline-offset-4" style={{ color: "var(--accent-apps)" }}>
@@ -59,15 +62,10 @@ export default function Home() {
 
       <section className="mt-10 border-t-2 border-[var(--border)] pt-6">
         <h2 className="text-2xl font-extrabold">A bit about me</h2>
-        <div className="mt-4 grid gap-6 sm:grid-cols-2">
-          <p className="text-[var(--muted)]">
-            Mostly I build things impulsively — helpful apps, data science, passion projects, and lately multi-agent AI pipelines. I stumbled into it through a few required training courses at work, and it turned into teaching myself Python, web development, databases, and automation by building real projects with AI as a collaborator—not just a tool.
-          </p>
-          <div className="space-y-3 text-[var(--muted)]">
-            {site.bio.map((paragraph, i) => (
-              <p key={i}>{paragraph}</p>
-            ))}
-          </div>
+        <div className="mt-4 space-y-3 text-[var(--muted)]">
+          {site.bio.map((paragraph, i) => (
+            <p key={i}>{paragraph}</p>
+          ))}
         </div>
         <PhotoStrip photos={site.photos} accent="var(--accent)" />
       </section>
