@@ -14,25 +14,38 @@ export default function Home() {
           <p className="mt-4 text-lg leading-relaxed text-[var(--muted)]">
             Navy veteran, tax accountant, husband, and dog dad, currently teaching myself how to build with AI.
           </p>
-          <p className="mt-5 text-lg leading-relaxed">
-            Mostly I build things impulsively:{" "}
-            <Link href="/apps" className="font-semibold underline decoration-2 underline-offset-4" style={{ color: "var(--accent-apps)" }}>
-              productivity tools
-            </Link>
-            ,{" "}
-            <Link href="/fun-stuff" className="font-semibold underline decoration-2 underline-offset-4" style={{ color: "var(--accent-fun)" }}>
-              projects for hobbies
-            </Link>
-            ,{" "}
-            <Link href="/data-projects" className="font-semibold underline decoration-2 underline-offset-4" style={{ color: "var(--accent-data)" }}>
-              data science models
-            </Link>
-            ... and{" "}
-            <Link href="/productivity" className="font-semibold underline decoration-2 underline-offset-4" style={{ color: "var(--accent-productivity)" }}>
-              whatever&apos;s got me scatterbrained this week
-            </Link>
-            .
-          </p>
+          <ul className="mt-5 space-y-2 text-lg leading-relaxed">
+            <li>
+              <Link href="/helpful-apps" className="font-semibold underline decoration-2 underline-offset-4" style={{ color: "var(--accent-apps)" }}>
+                Helpful apps
+              </Link>{" "}
+              — everyday tools built to solve real problems
+            </li>
+            <li>
+              <Link href="/data-science" className="font-semibold underline decoration-2 underline-offset-4" style={{ color: "var(--accent-data)" }}>
+                Data science
+              </Link>{" "}
+              — models and analysis projects
+            </li>
+            <li>
+              <Link href="/passion-projects" className="font-semibold underline decoration-2 underline-offset-4" style={{ color: "var(--accent-fun)" }}>
+                Passion projects
+              </Link>{" "}
+              — built purely because they were fun
+            </li>
+            <li>
+              <Link href="/agentic-pipelines" className="font-semibold underline decoration-2 underline-offset-4" style={{ color: "var(--accent-productivity)" }}>
+                Agentic &amp; multi-agentic pipelines
+              </Link>{" "}
+              — systems built from multiple AI agents coordinating toward one outcome
+            </li>
+            <li>
+              <Link href="/coming-soon" className="font-semibold underline decoration-2 underline-offset-4" style={{ color: "var(--accent-comingsoon)" }}>
+                Coming soon
+              </Link>{" "}
+              — whatever&apos;s got me scatterbrained this week
+            </li>
+          </ul>
         </div>
 
         <div className="relative aspect-square overflow-hidden rounded-2xl border-2 bg-[var(--card)]"

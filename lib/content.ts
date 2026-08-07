@@ -206,7 +206,24 @@ export const dataProjects: Project[] = [
   },
 ];
 
-export const productivityProjects: Project[] = [
+export const agenticProjects: Project[] = [
+  {
+    title: "Cold War: Decided",
+    summary:
+      "A Cold War strategic-crisis simulator that makes a full multi-agent pipeline visible end to end — four evidence-siloed specialists, Chief feedback, red-team review, and a human authorization gate.",
+    description:
+      "Four specialists (Submarine, ELINT, Aircraft, HUMINT) report on the same crisis from isolated evidence dossiers, get one round of Chief feedback, revise once each, then face a Counterintelligence red-team review before the Chief synthesizes a final brief for a human to authorize. Demo mode replays that pipeline deterministically with no API key. Live AI mode runs it for real — 14 OpenAI calls per mission, every stage written to an immutable Postgres ledger before the UI advances, and every report scored by a rule-based evaluator for evidence discipline, calibration, and independence rather than just plausibility.",
+    github: "https://github.com/travtrego/Cold-War-decided-",
+    demo: "https://cold-war-decided.vercel.app",
+    tags: ["OpenAI API", "Multi-agent orchestration", "Neon Postgres", "Context isolation", "Human-in-the-loop design"],
+    nextSteps: [
+      "Having built a rule-based evaluator to score evidence discipline and independence, a future project could pit it against an LLM-as-judge grader on the same transcripts and see where they disagree",
+      "Now that every mission stage lands in an immutable ledger, a future project could add a side-by-side replay view to diff two runs of the same scenario",
+    ],
+  },
+];
+
+export const comingSoonProjects: Project[] = [
   {
     title: "Guided Visualization",
     summary:
@@ -228,18 +245,6 @@ export const productivityProjects: Project[] = [
     tags: ["Python", "Computer vision", "CNN / transfer learning", "Image classification"],
     images: [
       { src: "/projects/right-whale-classifier/whale-photo.jpg", alt: "A North Atlantic right whale underwater, its head callosities visible, with a diver for scale" },
-    ],
-    comingSoon: true,
-  },
-  {
-    title: "Cold War Multi-Agent Simulator",
-    summary:
-      "A multi-agent orchestration system built to study how specialized AI agents coordinate, evaluated through a Cold War intelligence scenario.",
-    description:
-      "Six specialist agents, each confined to an isolated information silo — submarine, radar and signals, aircraft, field, and counterintelligence — report exclusively to a Chief Agent, which resolves contradictions, routes follow-up tasks, and synthesizes a final briefing for human sign-off. Every agent's inputs, instructions, and outputs remain inspectable, and a structured post-mission debrief surfaces failure modes such as duplicated work, dropped context, and missed follow-ups.",
-    tags: ["Multi-agent orchestration", "Claude API (Anthropic SDK)", "Context management", "Human-in-the-loop design"],
-    images: [
-      { src: "/projects/cold-war-simulator/periscope.png", alt: "Illustration of a submarine periscope and radar screen" },
     ],
     comingSoon: true,
   },

@@ -5,10 +5,11 @@ import { usePathname } from "next/navigation";
 
 const links = [
   { href: "/", label: "Home", emoji: "👋", accent: "var(--accent)" },
-  { href: "/apps", label: "Practical", emoji: "💻", accent: "var(--accent-apps)" },
-  { href: "/fun-stuff", label: "Fun Stuff", emoji: "🎉", accent: "var(--accent-fun)" },
-  { href: "/data-projects", label: "Data Projects", emoji: "📊", accent: "var(--accent-data)" },
-  { href: "/productivity", label: "Current Projects", emoji: "🧾", accent: "var(--accent-productivity)" },
+  { href: "/helpful-apps", label: "Helpful Apps", emoji: "💻", accent: "var(--accent-apps)" },
+  { href: "/data-science", label: "Data Science", emoji: "📊", accent: "var(--accent-data)" },
+  { href: "/passion-projects", label: "Passion Projects", emoji: "🎉", accent: "var(--accent-fun)" },
+  { href: "/agentic-pipelines", label: "Agentic Pipelines", emoji: "🤖", accent: "var(--accent-productivity)" },
+  { href: "/coming-soon", label: "Coming Soon", emoji: "🔜", accent: "var(--accent-comingsoon)" },
 ];
 
 export default function Nav() {
