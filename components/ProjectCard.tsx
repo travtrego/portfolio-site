@@ -18,7 +18,7 @@ export default function ProjectCard({ project, accent }: { project: Project; acc
         )}
       </div>
       {project.summary && (
-        <p className="mt-2 text-[15px] font-semibold leading-snug text-[var(--foreground)]">
+        <p className="mt-2 text-base font-bold leading-snug text-[var(--foreground)] sm:text-[17px]">
           {project.summary}
         </p>
       )}
@@ -66,13 +66,13 @@ export default function ProjectCard({ project, accent }: { project: Project; acc
   );
 
   const learnContent = (project.improvements || project.nextSteps) && (
-    <div className="mt-4 grid gap-4 sm:grid-cols-2">
+    <div className="mt-4 grid gap-4 border-t border-dashed border-[var(--border)] pt-4 opacity-90 sm:grid-cols-2">
       {project.improvements && project.improvements.length > 0 && (
         <div>
-          <p className="text-xs font-medium uppercase tracking-wide text-[var(--muted)]">
+          <p className="text-[11px] font-medium uppercase tracking-wide text-[var(--muted)]">
             Areas for improvement
           </p>
-          <ul className="mt-2 list-disc space-y-1 pl-5 text-sm text-[var(--muted)]">
+          <ul className="mt-2 list-disc space-y-1 pl-5 text-[13px] text-[var(--muted)]">
             {project.improvements.map((item) => (
               <li key={item}>{item}</li>
             ))}
@@ -81,8 +81,8 @@ export default function ProjectCard({ project, accent }: { project: Project; acc
       )}
       {project.nextSteps && project.nextSteps.length > 0 && (
         <div>
-          <p className="text-xs font-medium uppercase tracking-wide text-[var(--muted)]">Opportunities to learn</p>
-          <ul className="mt-2 list-disc space-y-1 pl-5 text-sm text-[var(--muted)]">
+          <p className="text-[11px] font-medium uppercase tracking-wide text-[var(--muted)]">Opportunities to learn</p>
+          <ul className="mt-2 list-disc space-y-1 pl-5 text-[13px] text-[var(--muted)]">
             {project.nextSteps.map((item) => (
               <li key={item}>{item}</li>
             ))}
@@ -93,13 +93,13 @@ export default function ProjectCard({ project, accent }: { project: Project; acc
   );
 
   const imageContent = project.images && project.images.length > 0 && (
-    <div className="mt-4 flex gap-2 sm:mt-0 sm:w-52 sm:shrink-0 sm:flex-col">
+    <div className="-mx-5 mt-4 flex snap-x snap-mandatory gap-2 overflow-x-auto px-5 pb-1 sm:mx-0 sm:mt-0 sm:w-52 sm:shrink-0 sm:snap-none sm:flex-col sm:overflow-visible sm:px-0 sm:pb-0">
       {project.images.map((image) => (
         <button
           key={image.src}
           type="button"
           onClick={() => setLightbox(image)}
-          className="group relative h-28 flex-1 cursor-zoom-in overflow-hidden rounded-lg border-2 border-[var(--border)] bg-[var(--background)] sm:h-32 sm:flex-none sm:w-full"
+          className="group relative h-36 w-52 shrink-0 snap-center cursor-zoom-in overflow-hidden rounded-lg border-2 border-[var(--border)] bg-[var(--background)] sm:h-32 sm:w-full"
         >
           <Image src={image.src} alt={image.alt} fill sizes="208px" className="object-cover object-top" />
           <span className="absolute inset-0 flex items-center justify-center bg-black/0 opacity-0 transition-all group-hover:bg-black/40 group-hover:opacity-100">
