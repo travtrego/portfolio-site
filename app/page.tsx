@@ -16,13 +16,8 @@ export default function Home() {
           </p>
           <ul className="mt-5 space-y-2 text-lg leading-relaxed">
             <li>
-              <Link href="/helpful-apps" className="font-semibold underline decoration-2 underline-offset-4" style={{ color: "var(--accent-apps)" }}>
-                Helpful apps
-              </Link>
-            </li>
-            <li>
-              <Link href="/data-science" className="font-semibold underline decoration-2 underline-offset-4" style={{ color: "var(--accent-data)" }}>
-                Data science
+              <Link href="/agentic-pipelines" className="font-semibold underline decoration-2 underline-offset-4" style={{ color: "var(--accent-productivity)" }}>
+                Agentic &amp; multi-agentic pipelines
               </Link>
             </li>
             <li>
@@ -31,8 +26,13 @@ export default function Home() {
               </Link>
             </li>
             <li>
-              <Link href="/agentic-pipelines" className="font-semibold underline decoration-2 underline-offset-4" style={{ color: "var(--accent-productivity)" }}>
-                Agentic &amp; multi-agentic pipelines
+              <Link href="/data-science" className="font-semibold underline decoration-2 underline-offset-4" style={{ color: "var(--accent-data)" }}>
+                Data science
+              </Link>
+            </li>
+            <li>
+              <Link href="/helpful-apps" className="font-semibold underline decoration-2 underline-offset-4" style={{ color: "var(--accent-apps)" }}>
+                Apps
               </Link>
             </li>
             <li>
