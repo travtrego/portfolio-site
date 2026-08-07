@@ -90,7 +90,7 @@ export const funStuff: Project[] = [
     summary:
       "A self-updating farm-system dashboard with a custom prospect ranking model and a Claude-powered chat assistant that reasons over the live database.",
     description:
-      "An automated pipeline pulls and reconciles news, stats, promotions, and injuries on a schedule, feeding a custom weighted ranking model (scouting, performance, age/level, media sentiment, risk) that shows exactly what moved each player's rank. \"Prospect Genie\" is a Claude-powered chat assistant that reasons over the live database to answer natural-language questions about the system — why a player hasn't been promoted, who's trending, head-to-head comparisons. Uses Supabase, and an automated quality pipeline (data audits, ranking backtests against historical outcomes, and typechecking) that runs before every deploy.",
+      "An automated pipeline pulls and reconciles news, stats, promotions, and injuries on a schedule, feeding a ranking model I designed from scratch — weighing scouting, performance, age/level, media sentiment, and risk — that shows exactly what moved each player's rank. \"Prospect Genie\" is a live, Claude-powered chat assistant that reasons over the database to answer natural-language questions about the system — why a player hasn't been promoted, who's trending, head-to-head comparisons. Uses Supabase, and an automated quality pipeline (data audits, ranking backtests against historical outcomes, and typechecking) that runs before every deploy.",
     github: "https://github.com/travtrego/phillies-prospect-pulse",
     demo: "https://phillies-prospect-pulse-self.vercel.app/",
     tags: [
@@ -107,7 +107,7 @@ export const funStuff: Project[] = [
       { src: "/projects/prospect-pulse/genie.png", alt: "Prospect Genie AI chat assistant" },
     ],
     nextSteps: [
-      "Having built a Claude assistant that reasons over a live database here, a future project could give it real tool-use / function-calling instead of read-only context",
+      "Having weighed Claude against DeepSeek and Llama for this Claude assistant — tested live against the real API, not just compared on paper — a future project could build a provider-switchable AI layer to compare cost, latency, and quality head-to-head.",
       "Now that a full backtesting pipeline exists, a future project could swap the weighted ranking formula for a trained model and compare the two",
     ],
   },
