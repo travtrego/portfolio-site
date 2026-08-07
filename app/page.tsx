@@ -18,32 +18,27 @@ export default function Home() {
             <li>
               <Link href="/helpful-apps" className="font-semibold underline decoration-2 underline-offset-4" style={{ color: "var(--accent-apps)" }}>
                 Helpful apps
-              </Link>{" "}
-              — everyday tools built to solve real problems
+              </Link>
             </li>
             <li>
               <Link href="/data-science" className="font-semibold underline decoration-2 underline-offset-4" style={{ color: "var(--accent-data)" }}>
                 Data science
-              </Link>{" "}
-              — models and analysis projects
+              </Link>
             </li>
             <li>
               <Link href="/passion-projects" className="font-semibold underline decoration-2 underline-offset-4" style={{ color: "var(--accent-fun)" }}>
                 Passion projects
-              </Link>{" "}
-              — built purely because they were fun
+              </Link>
             </li>
             <li>
               <Link href="/agentic-pipelines" className="font-semibold underline decoration-2 underline-offset-4" style={{ color: "var(--accent-productivity)" }}>
                 Agentic &amp; multi-agentic pipelines
-              </Link>{" "}
-              — systems built from multiple AI agents coordinating toward one outcome
+              </Link>
             </li>
             <li>
               <Link href="/coming-soon" className="font-semibold underline decoration-2 underline-offset-4" style={{ color: "var(--accent-comingsoon)" }}>
                 Coming soon
-              </Link>{" "}
-              — whatever&apos;s got me scatterbrained this week
+              </Link>
             </li>
           </ul>
         </div>
@@ -66,7 +61,7 @@ export default function Home() {
         <h2 className="text-2xl font-extrabold">A bit about me</h2>
         <div className="mt-4 grid gap-6 sm:grid-cols-2">
           <p className="text-[var(--muted)]">
-            I stumbled into AI through a few required training courses at work. Since then, I&apos;ve been teaching myself Python, web development, databases, and automation by building real projects with AI as a collaborator—not just a tool.
+            Mostly I build things impulsively — helpful apps, data science, passion projects, and lately multi-agent AI pipelines. I stumbled into it through a few required training courses at work, and it turned into teaching myself Python, web development, databases, and automation by building real projects with AI as a collaborator—not just a tool.
           </p>
           <div className="space-y-3 text-[var(--muted)]">
             {site.bio.map((paragraph, i) => (
