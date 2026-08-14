@@ -5,6 +5,8 @@ export type Project = {
   description: string;
   github?: string;
   demo?: string;
+  /** Link to an in-site case-study page, when one exists for this project. */
+  caseStudy?: string;
   tags?: string[];
   improvements?: string[];
   nextSteps?: string[];
@@ -210,12 +212,21 @@ export const agenticProjects: Project[] = [
   {
     title: "Cold War: Decided",
     summary:
-      "A Cold War strategic-crisis simulator that makes a full multi-agent pipeline visible end to end — four evidence-siloed specialists, Chief feedback, red-team review, and a human authorization gate.",
+      "An evidence-disciplined, production-deployed multi-agent decision simulator — document ingestion, specialist agents, independent review, deterministic guardrails, human authorization, and a persistent audit trail.",
     description:
-      "Four specialists (Submarine, ELINT, Aircraft, HUMINT) report on the same crisis from isolated evidence dossiers, get one round of Chief feedback, revise once each, then face a Counterintelligence red-team review before the Chief synthesizes a final brief for a human to authorize. Demo mode replays that pipeline deterministically with no API key. Live AI mode runs it for real — 14 OpenAI calls per mission, every stage written to an immutable Postgres ledger before the UI advances, and every report scored by a rule-based evaluator for evidence discipline, calibration, and independence rather than just plausibility.",
+      "Four evidence-siloed specialists (Submarine, ELINT, Air, HUMINT) analyze the same crisis from isolated dossiers, get targeted Chief feedback, revise once each, and pass through Counterintelligence red-team review before a Decision Auditor challenges the proposal and a deterministic software policy matrix — not free-form prose — decides which actions are actually eligible. A human still authorizes every outcome. The system ingests PDF scenarios with page-level citations, and every one of the 16 pipeline stages is preserved in a persistent Postgres mission ledger for later inspection. The Cold War setting is the user-facing theme; the reusable part is the architecture underneath.",
     github: "https://github.com/travtrego/Cold-War-decided-",
     demo: "https://cold-war-decided.vercel.app",
-    tags: ["OpenAI API", "Multi-agent orchestration", "Neon Postgres", "Context isolation", "Human-in-the-loop design"],
+    caseStudy: "/agentic-pipelines/cold-war-decided",
+    tags: [
+      "OpenAI Responses API",
+      "GPT-5 Mini",
+      "Neon Postgres",
+      "Vercel Functions",
+      "JSON Schema structured outputs",
+      "PDF ingestion (unpdf)",
+      "SHA-256 fingerprinting",
+    ],
     nextSteps: [
       "Having built a rule-based evaluator to score evidence discipline and independence, a future project could pit it against an LLM-as-judge grader on the same transcripts and see where they disagree",
       "Now that every mission stage lands in an immutable ledger, a future project could add a side-by-side replay view to diff two runs of the same scenario",

@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import type { Project } from "@/lib/content";
 
 export default function ProjectCard({ project, accent }: { project: Project; accent: string }) {
@@ -23,7 +24,7 @@ export default function ProjectCard({ project, accent }: { project: Project; acc
         </p>
       )}
       <p className="mt-2 text-sm text-[var(--muted)]">{project.description}</p>
-      {(project.github || project.demo) && (
+      {(project.github || project.demo || project.caseStudy) && (
         <div className="mt-4 flex flex-wrap gap-2">
           {project.demo && (
             <a
@@ -46,6 +47,15 @@ export default function ProjectCard({ project, accent }: { project: Project; acc
             >
               GitHub ↗
             </a>
+          )}
+          {project.caseStudy && (
+            <Link
+              href={project.caseStudy}
+              className="rounded-full border-2 border-dashed px-3 py-1 text-xs font-bold transition-transform hover:-translate-y-0.5"
+              style={{ borderColor: accent, color: accent }}
+            >
+              Case study →
+            </Link>
           )}
         </div>
       )}
