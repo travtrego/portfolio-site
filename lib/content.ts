@@ -260,3 +260,20 @@ export const comingSoonProjects: Project[] = [
     comingSoon: true,
   },
 ];
+
+// Not linked from the nav or homepage — assignments and projects from courses and training,
+// not flagship work. Standout entries get promoted into one of the real categories above.
+export const courseworkProjects: Project[] = [
+  {
+    title: "Resume & Story Site",
+    summary:
+      "A two-page personal resume microsite — a resume page and a separate narrative \"My Story\" page — built as a course project.",
+    description:
+      "Static HTML/CSS site with a shared nav between a structured resume (experience, skills, education, selected work) and a four-chapter narrative page tracing the path from Navy electronic warfare through civilian technical roles to a Master's in Accounting and work at EY. No framework or backend — just semantic HTML and hand-written CSS.",
+    tags: ["HTML", "CSS", "Static site"],
+    images: [
+      { src: "/projects/resume-website/resume.png", alt: "Resume page with portrait, experience timeline, skills, and education" },
+      { src: "/projects/resume-website/story.png", alt: "My Story page with a four-chapter narrative" },
+    ],
+  },
+];
