@@ -267,10 +267,11 @@ export const courseworkProjects: Project[] = [
   {
     title: "Resume & Story Site",
     summary:
-      "A two-page personal resume microsite — a resume page and a separate narrative \"My Story\" page — built as a course project.",
+      "The first project from Udemy's \"ChatGPT and Generative AI\" — built to practice prompt engineering, not just generate throwaway output. A resume page and a separate narrative \"My Story\" page.",
     description:
-      "Static HTML/CSS site with a shared nav between a structured resume (experience, skills, education, selected work) and a four-chapter narrative page tracing the path from Navy electronic warfare through civilian technical roles to a Master's in Accounting and work at EY. No framework or backend — just semantic HTML and hand-written CSS.",
-    tags: ["HTML", "CSS", "Static site"],
+      "Built as the first course project for Udemy's \"ChatGPT and Generative AI,\" using it as a testbed for prompt engineering technique — iterating on prompts to get a structured resume (experience, skills, education, selected work) and a separate four-chapter narrative page tracing the path from Navy electronic warfare through civilian technical roles to a Master's in Accounting and work at EY. Static HTML/CSS, no framework or backend. The link opens to the resume page — use its own nav to reach \"My Story.\"",
+    demo: "/coursework/resume-website/index.html",
+    tags: ["HTML", "CSS", "Static site", "Prompt engineering"],
     images: [
       { src: "/projects/resume-website/resume.png", alt: "Resume page with portrait, experience timeline, skills, and education" },
       { src: "/projects/resume-website/story.png", alt: "My Story page with a four-chapter narrative" },

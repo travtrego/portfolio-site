@@ -18,7 +18,7 @@ export default function Nav() {
 
   return (
     <nav className="border-b-2 border-[var(--border)] bg-[var(--card)]">
-      <div className="mx-auto flex max-w-4xl flex-wrap items-center gap-2 px-6 py-3">
+      <div className="mx-auto flex max-w-6xl flex-wrap items-center gap-2 px-6 py-3">
         {links.map((link) => {
           const active = pathname === link.href;
           return (
