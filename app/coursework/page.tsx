@@ -7,7 +7,7 @@ export default function CourseworkPage() {
       title="Coursework"
       description="Assignments and projects from courses and training. Not flagship work — just where it lives."
       projects={courseworkProjects}
-      accent="var(--accent-comingsoon)"
+      accent="var(--accent-coursework)"
     />
   );
 }

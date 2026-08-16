@@ -10,6 +10,7 @@
   --accent-data: #c084fc;
   --accent-productivity: #34d399;
   --accent-comingsoon: #94a3b8;
+  --accent-coursework: #2dd4bf;
   --card: #12151c;
   --border: #232733;
   /* text color to use on top of a solid accent-colored fill (button/chip/pill) */
@@ -28,6 +29,7 @@
     --accent-data: #9333ea;
     --accent-productivity: #04795a;
     --accent-comingsoon: #475569;
+    --accent-coursework: #0f766e;
     --card: #fffefb;
     --border: #e3e6ec;
     --on-accent: #ffffff;

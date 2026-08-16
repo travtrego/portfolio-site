@@ -10,6 +10,7 @@ const links = [
   { href: "/data-science", label: "Data Science", emoji: "📊", accent: "var(--accent-data)" },
   { href: "/helpful-apps", label: "Apps", emoji: "💻", accent: "var(--accent-apps)" },
   { href: "/coming-soon", label: "Coming Soon", emoji: "🔜", accent: "var(--accent-comingsoon)" },
+  { href: "/coursework", label: "Coursework", emoji: "🎓", accent: "var(--accent-coursework)" },
 ];
 
 export default function Nav() {
