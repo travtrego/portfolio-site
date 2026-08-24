@@ -11,6 +11,7 @@ const links = [
   { href: "/helpful-apps", label: "Apps", emoji: "💻", accent: "var(--accent-apps)" },
   { href: "/coming-soon", label: "Coming Soon", emoji: "🔜", accent: "var(--accent-comingsoon)" },
   { href: "/coursework", label: "Coursework", emoji: "🎓", accent: "var(--accent-coursework)" },
+  { href: "/philosophy", label: "Philosophy", emoji: "🔥", accent: "var(--accent-philosophy)" },
 ];
 
 export default function Nav() {
