@@ -140,7 +140,6 @@ export const dataProjects: Project[] = [
       "Three convolutional neural networks built from scratch and tuned to 99.34% accuracy — missing just 66 of 10,000 handwritten digits.",
     description:
       "Built in Keras/TensorFlow across three progressively deeper architectures — stacking Conv2D blocks with batch normalization and dropout, tuning learning rate schedules with EarlyStopping and ReduceLROnPlateau, and diagnosing what the model got wrong with a full misclassification breakdown.",
-    github: "https://github.com/travtrego/digit-recognizer",
     tags: [
       "Python",
       "TensorFlow / Keras",
@@ -163,7 +162,6 @@ export const dataProjects: Project[] = [
       "Scores airline climate claims 0–5 on how specific and verifiable they are — not on whether they're true.",
     description:
       "A screening model for greenwashing risk in corporate climate claims, built from 2025 sustainability and environmental performance reports from three major airlines. Each claim is scored against five credibility indicators — a stated number, target year, baseline year, emissions scope, and progress evidence — with only the indicators actually applicable to that type of claim counted, so a claim isn't penalized for missing a scope reference it was never expected to have. Claims that back up fewer of their applicable indicators score higher on a 0–5 Greenwashing Risk Score. Built, documented, and presented using Python/pandas pipelines and Next.js/Recharts.",
-    github: "https://github.com/travtrego/greenwashing",
     tags: [
       "Python / pandas",
       "Rule-based NLP scoring",
@@ -187,7 +185,6 @@ export const dataProjects: Project[] = [
       "8,348 risk factors pulled from 49 bank and insurer 10-K filings, then clustered into themes with no labeled training data.",
     description:
       "Each company's \"Item 1A. Risk Factors\" section is scraped from SEC EDGAR, split into individual risk statements, vectorized with TF-IDF, and grouped into 12 clusters with K-means — 6 of which turned out to be genuine, business-model-aligned risk themes (Bank Capital & Liquidity, Cybersecurity & Data, Regulatory & Privacy, and others), rediscovering the industry's risk taxonomy without any labeled training data. Built as a clean, documented, reproducible pipeline, plus a Next.js/Recharts dashboard for exploring the results by sub-sector and by company.",
-    github: "https://github.com/travtrego/fso-risk-explorer",
     tags: [
       "Python / pandas",
       "scikit-learn (TF-IDF, K-means)",
