@@ -8,6 +8,10 @@ import type { Project } from "@/lib/content";
 export default function ProjectCard({ project, accent }: { project: Project; accent: string }) {
   const [lightbox, setLightbox] = useState<{ src: string; alt: string } | null>(null);
 
+  const hasImprovements = Boolean(project.improvements?.length);
+  const hasNextSteps = Boolean(project.nextSteps?.length);
+  const hasImages = Boolean(project.images?.length);
+
   const textContent = (
     <>
       <div className="flex items-center justify-between gap-2">
@@ -75,8 +79,12 @@ export default function ProjectCard({ project, accent }: { project: Project; acc
     </>
   );
 
-  const learnContent = (project.improvements || project.nextSteps) && (
-    <div className="mt-4 grid gap-4 sm:grid-cols-2">
+  const learnContent = (hasImprovements || hasNextSteps) && (
+    <div
+      className={`mt-4 grid gap-4 sm:col-start-1 sm:row-start-2${
+        hasImprovements && hasNextSteps ? " sm:grid-cols-2" : ""
+      }`}
+    >
       {project.improvements && project.improvements.length > 0 && (
         <div>
           <p className="text-xs font-medium uppercase tracking-wide text-[var(--muted)]">
@@ -103,7 +111,7 @@ export default function ProjectCard({ project, accent }: { project: Project; acc
   );
 
   const imageContent = project.images && project.images.length > 0 && (
-    <div className="mt-4 flex gap-2 sm:mt-0 sm:w-52 sm:shrink-0 sm:flex-col">
+    <div className="mt-4 flex gap-2 sm:col-start-2 sm:row-start-1 sm:row-end-3 sm:mt-0 sm:w-52 sm:flex-col">
       {project.images.map((image) => (
         <button
           key={image.src}
@@ -135,13 +143,13 @@ export default function ProjectCard({ project, accent }: { project: Project; acc
   );
 
   const content = (
-    <>
-      <div className="sm:flex sm:items-start sm:gap-6">
-        <div className="min-w-0 flex-1">{textContent}</div>
-        {imageContent}
-      </div>
+    <div
+      className={hasImages ? "sm:grid sm:grid-cols-[minmax(0,1fr)_13rem] sm:items-start sm:gap-x-6" : ""}
+    >
+      <div className="min-w-0 sm:col-start-1 sm:row-start-1">{textContent}</div>
+      {imageContent}
       {learnContent}
-    </>
+    </div>
   );
 
   return (
