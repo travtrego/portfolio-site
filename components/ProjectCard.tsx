@@ -111,15 +111,21 @@ export default function ProjectCard({ project, accent }: { project: Project; acc
   );
 
   const imageContent = project.images && project.images.length > 0 && (
-    <div className="mt-4 flex gap-2 sm:col-start-2 sm:row-start-1 sm:row-end-3 sm:mt-0 sm:w-52 sm:flex-col">
+    <div className="-mx-1 mt-4 flex snap-x gap-2 overflow-x-auto px-1 pb-1 sm:col-start-2 sm:row-start-1 sm:row-end-3 sm:mx-0 sm:mt-0 sm:w-52 sm:flex-col sm:overflow-visible sm:p-0">
       {project.images.map((image) => (
         <button
           key={image.src}
           type="button"
           onClick={() => setLightbox(image)}
-          className="group relative h-28 flex-1 cursor-zoom-in overflow-hidden rounded-lg border-2 border-[var(--border)] bg-[var(--background)] sm:h-32 sm:flex-none sm:w-full"
+          className="group relative aspect-[4/3] shrink-0 grow basis-[70%] snap-start cursor-zoom-in overflow-hidden rounded-lg border-2 border-[var(--border)] bg-[var(--background)] sm:w-full sm:grow-0 sm:basis-auto"
         >
-          <Image src={image.src} alt={image.alt} fill sizes="208px" className="object-cover object-top" />
+          <Image
+            src={image.src}
+            alt={image.alt}
+            fill
+            sizes="(min-width: 640px) 208px, 50vw"
+            className="object-contain"
+          />
           <span className="absolute inset-0 flex items-center justify-center bg-black/0 opacity-0 transition-all group-hover:bg-black/40 group-hover:opacity-100">
             <svg
               xmlns="http://www.w3.org/2000/svg"
