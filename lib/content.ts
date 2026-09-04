@@ -256,6 +256,24 @@ export const comingSoonProjects: Project[] = [
     ],
     comingSoon: true,
   },
+  {
+    title: "Wildlife Drone Program",
+    summary:
+      "Building both the aircraft and the autonomy stack behind a deliberately homegrown goal: spotting the coyotes that move through the neighborhood, from the air.",
+    description:
+      "A hardware build and a software program at the same time. Three airframes \u2014 an X500 V2 as the proving platform, a Fighter 2430 VTOL for long-endurance mapping, and Coyote for close-range multi-sensor work \u2014 assembled and bench-tested rather than bought turnkey, with a Jetson companion computer carrying the perception load. The software runs PX4 and MAVSDK under one hard rule: flight-critical authority stays on the autopilot, covering geofence, return-to-home, battery and link-loss failsafes, while mission logic and inference stay on the companion computer. The current milestone is simulation-only \u2014 an arm/takeoff/loiter/land smoke mission against PX4 SITL, a config layer written to import no MAVSDK at all so it unit-tests in CI with no simulator or vehicle present, and an address check that refuses anything but loopback, so the smoke mission structurally cannot be pointed at a real aircraft.",
+    github: "https://github.com/travtrego/Wildlife-Drone-Program",
+    tags: [
+      "PX4 / MAVSDK",
+      "Python",
+      "ROS 2",
+      "Jetson companion compute",
+      "Computer vision",
+      "Airframe build",
+      "GitHub Actions CI",
+    ],
+    comingSoon: true,
+  },
 ];
 
 // Not linked from the nav or homepage — assignments and projects from courses and training,
