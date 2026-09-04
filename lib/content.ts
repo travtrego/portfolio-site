@@ -293,7 +293,7 @@ export const learningPlan: LearningGroup[] = [
     note: "The vocabulary layer — what the services are and where AI sits in a cloud stack.",
     courses: [
       "Microsoft Azure Fundamentals (AZ-900)",
-      "Microsoft Azure AI Fundamentals (AI-900)",
+      "Microsoft Azure AI Fundamentals (AI-901)",
     ],
   },
   {
