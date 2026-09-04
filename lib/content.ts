@@ -275,3 +275,83 @@ export const courseworkProjects: Project[] = [
     ],
   },
 ];
+
+export type LearningGroup = {
+  group: string;
+  note: string;
+  courses: string[];
+};
+
+export const learningPlan: LearningGroup[] = [
+  {
+    group: "Currently working through",
+    note: "Internal EY training, running alongside everything below.",
+    courses: ["EY Sustainability Courses", "EY Technology Courses"],
+  },
+  {
+    group: "Cloud & AI foundations",
+    note: "The vocabulary layer — what the services are and where AI sits in a cloud stack.",
+    courses: [
+      "Microsoft Azure Fundamentals (AZ-900)",
+      "Microsoft Azure AI Fundamentals (AI-900)",
+    ],
+  },
+  {
+    group: "Building with LLM APIs",
+    note: "Free, fast, and closest to what I'm already building — these feed the projects on this site directly.",
+    courses: [
+      "Anthropic Academy — Building with the Claude API",
+      "Anthropic Academy — Claude Code in Action",
+      "Anthropic Academy — Model Context Protocol (MCP)",
+      "OpenAI Academy — AI Foundations",
+      "OpenAI Academy — Agents and Workflows",
+      "DeepLearning.AI — Multi AI Agent Systems",
+      "DataCamp — Developing AI Applications with the OpenAI & Anthropic APIs",
+    ],
+  },
+  {
+    group: "Machine learning depth",
+    note: "The part behind the Data Science tab — so the CNN and clustering work rests on theory, not just tutorials.",
+    courses: [
+      "DeepLearning.AI — Machine Learning Specialization",
+      "DeepLearning.AI — Deep Learning Specialization",
+      "Microsoft Certified: MLOps Engineer Associate (AI-300)",
+    ],
+  },
+  {
+    group: "Applied Azure AI",
+    note: "Hands-on assessments rather than multiple choice — you build the thing to pass.",
+    courses: [
+      "Microsoft Applied Skills — Develop generative AI apps using Azure AI Foundry",
+      "Microsoft Applied Skills — Get started developing agents in Microsoft Foundry",
+      "Microsoft Certified: Azure AI Apps and Agents Developer Associate",
+    ],
+  },
+  {
+    group: "Vendor specializations",
+    note: "Depth in the model and data-platform layer.",
+    courses: [
+      "NVIDIA-Certified Associate — Generative AI LLMs (NCA-GENL)",
+      "NVIDIA-Certified Associate — Generative AI Multimodal (NCA-GENM)",
+      "Databricks Certified Generative AI Engineer Associate",
+    ],
+  },
+  {
+    group: "Risk, sustainability & governance",
+    note: "Where the accounting background actually compounds — the AI work is more useful if I can speak climate disclosure and model risk too.",
+    courses: [
+      "GARP — Sustainability and Climate Risk (SCR)",
+      "IFRS Foundation — Fundamentals of Sustainability Accounting (FSA) Credential",
+      "IAPP — AI Governance Professional (AIGP)",
+    ],
+  },
+  {
+    group: "Stretch goals",
+    note: "Breadth once the core path is done. NCP-AAI expects a year or two of production agentic work, so it's genuinely last.",
+    courses: [
+      "Google Cloud — Generative AI Leader",
+      "AWS Certified AI Practitioner (AIF-C01)",
+      "NVIDIA Certified Professional — Agentic AI (NCP-AAI)",
+    ],
+  },
+];

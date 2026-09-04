@@ -1,3 +1,4 @@
+import type { ReactNode } from "react";
 import type { Project } from "@/lib/content";
 import ProjectCard from "@/components/ProjectCard";
 
@@ -6,11 +7,13 @@ export default function ProjectGrid({
   description,
   projects,
   accent,
+  children,
 }: {
   title: string;
   description: string;
   projects: Project[];
   accent: string;
+  children?: ReactNode;
 }) {
   return (
     <main className="mx-auto max-w-4xl px-6 py-12">
@@ -32,6 +35,7 @@ export default function ProjectGrid({
       ) : (
         <p className="mt-8 text-[var(--muted)]">Nothing here yet — first project is in the works.</p>
       )}
+      {children}
     </main>
   );
 }
