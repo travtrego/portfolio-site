@@ -370,4 +370,9 @@ export const learningPlan: LearningGroup[] = [
       "NVIDIA Certified Professional — Agentic AI (NCP-AAI)",
     ],
   },
+  {
+    group: "Outside the AI track",
+    note: "A side project rather than part of the path above — though a drone and the computer-vision work would pair well eventually.",
+    courses: ["FAA Part 107 — Remote Pilot Certificate (small UAS)"],
+  },
 ];
