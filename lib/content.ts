@@ -289,24 +289,39 @@ export const learningPlan: LearningGroup[] = [
     courses: ["EY Sustainability Courses", "EY Technology Courses"],
   },
   {
-    group: "Cloud & AI foundations",
-    note: "The vocabulary layer — what the services are and where AI sits in a cloud stack.",
+    group: "Cloud & data fundamentals",
+    note: "The vocabulary layer — what the services are, and where AI and data sit in a cloud stack.",
     courses: [
       "Microsoft Azure Fundamentals (AZ-900)",
       "Microsoft Azure AI Fundamentals (AI-901)",
+      "Microsoft Azure Data Fundamentals (DP-900)",
     ],
   },
   {
-    group: "Building with LLM APIs",
+    group: "Building with LLM APIs & agents",
     note: "Free, fast, and closest to what I'm already building — these feed the projects on this site directly.",
     courses: [
       "Anthropic Academy — Building with the Claude API",
+      "Anthropic Academy — Claude Code 101",
       "Anthropic Academy — Claude Code in Action",
-      "Anthropic Academy — Model Context Protocol (MCP)",
+      "Anthropic Academy — Introduction to Model Context Protocol",
+      "Anthropic Academy — Advanced MCP",
+      "Anthropic Academy — Agent Skills",
+      "Anthropic Academy — Subagents",
       "OpenAI Academy — AI Foundations",
       "OpenAI Academy — Agents and Workflows",
+      "Hugging Face — LLM Course",
+      "Hugging Face — AI Agents Course",
       "DeepLearning.AI — Multi AI Agent Systems",
       "DataCamp — Developing AI Applications with the OpenAI & Anthropic APIs",
+    ],
+  },
+  {
+    group: "Data platform & BI",
+    note: "The stack client work actually runs on. My projects prove Python; this proves the rest of the pipeline.",
+    courses: [
+      "Microsoft Certified: Power BI Data Analyst Associate (PL-300)",
+      "Microsoft Certified: Fabric Data Engineer Associate (DP-700)",
     ],
   },
   {
@@ -315,6 +330,7 @@ export const learningPlan: LearningGroup[] = [
     courses: [
       "DeepLearning.AI — Machine Learning Specialization",
       "DeepLearning.AI — Deep Learning Specialization",
+      "Kaggle — Feature Engineering and Intro to Deep Learning",
       "Microsoft Certified: MLOps Engineer Associate (AI-300)",
     ],
   },
