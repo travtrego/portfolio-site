@@ -226,11 +226,11 @@ export const agenticProjects: Project[] = [
     images: [
       {
         src: "/projects/cold-war-simulator/command-center.png",
-        alt: "Cold War: Decided command center showing the active scenario and decision-readiness panel",
+        alt: "Cold War: Decided final assessment with confidence, supporting findings, uncertainties, and the Chief's NATO recommendation",
       },
       {
         src: "/projects/cold-war-simulator/agent-pipeline.png",
-        alt: "Cold War: Decided pipeline view showing four evidence-siloed specialist agents",
+        alt: "Completed Cold War: Decided pipeline showing four specialist agents, Chief feedback, counterintelligence review, and final synthesis",
       },
     ],
     nextSteps: [
@@ -256,11 +256,11 @@ export const agenticProjects: Project[] = [
     images: [
       {
         src: "/projects/blackstone-carry/disclosure-review.png",
-        alt: "Blackstone Carry Review six-stage disclosure pipeline",
+        alt: "Completed Blackstone Carry Review showing all six agent stages and the judge's chain-intact verdict",
       },
       {
         src: "/projects/blackstone-carry/carry-calculator.png",
-        alt: "Blackstone Carry Review deterministic carried-interest calculator",
+        alt: "BCP IV modeled carry result with total GP carry, effective carry, and a plain-English AI explanation",
       },
     ],
     nextSteps: [
