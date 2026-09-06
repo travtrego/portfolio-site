@@ -242,9 +242,9 @@ export const agenticProjects: Project[] = [
   {
     title: "Blackstone Carry Review",
     summary:
-      "A tested two-branch learning project that pairs a six-agent disclosure-review chain with a deterministic carried-interest calculator.",
+      "Six Claude agents turn public Blackstone carry disclosures into a graded review memo, while a separate calculator keeps the waterfall math in ordinary JavaScript.",
     description:
-      "Branch 1 passes primary-source excerpts through retrieval, mechanics, blind compression, skepticism, synthesis, and judging to show what evidence survives each handoff. Branch 2 keeps the waterfall math in normal JavaScript and uses Claude only to explain the precomputed result. The calculator uses dated, unverified source-table inputs and teaching assumptions — not Blackstone's actual fund terms or carry payable. Built as a local experiment in multi-agent architecture, evaluation-first testing, and honest limitation handling, not a production financial tool.",
+      "Built to test what happens when one AI agent's output becomes the next agent's only source. A retriever pulls SEC and Blackstone material; a mechanics agent explains hurdles, catch-up, and the GP/LP split; a summarizer compresses it; a skeptic challenges what survived; and a final judge grades the memo against the original source. A separate branch handles the numbers differently: normal JavaScript calculates a hypothetical fund waterfall, then Claude explains the already-computed result in plain English instead of doing the math itself. Repeated testing caught both one-off agent drift and a real timing bug in the calculator. The underlying fund table is a dated teaching dataset, so the tool is intentionally presented as a learning experiment — not an estimate of Blackstone's actual carry.",
     github: "https://github.com/travtrego/Blackstone-Carry-Project",
     tags: [
       "Anthropic Claude API",
@@ -265,8 +265,8 @@ export const agenticProjects: Project[] = [
       },
     ],
     nextSteps: [
-      "Replace the inherited June 2026 fund table with versioned, independently verified source records and explicit provenance",
-      "Compare repeated pipeline runs to measure which handoffs most often lose or distort facts",
+      "Having worked with a dated teaching table here, a future version could rebuild the inputs from versioned, independently verified source records with explicit provenance",
+      "Now that the six-stage chain is observable, a future project could compare repeated runs and measure which handoffs most often lose or distort facts",
     ],
   },
 ];
