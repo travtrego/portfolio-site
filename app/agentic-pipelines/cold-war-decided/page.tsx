@@ -148,15 +148,6 @@ export default function ColdWarCaseStudy() {
           >
             Live demo ↗
           </a>
-          <a
-            href="https://github.com/travtrego/Cold-War-decided-"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="rounded-full border-2 px-3 py-1 text-xs font-bold transition-transform hover:-translate-y-0.5"
-            style={{ borderColor: accent, color: accent }}
-          >
-            GitHub ↗
-          </a>
         </div>
       </div>
 

@@ -212,7 +212,6 @@ export const agenticProjects: Project[] = [
       "An evidence-disciplined, production-deployed multi-agent decision simulator — document ingestion, specialist agents, independent review, deterministic guardrails, human authorization, and a persistent audit trail.",
     description:
       "Four evidence-siloed specialists (Submarine, ELINT, Air, HUMINT) analyze the same crisis from isolated dossiers, get targeted Chief feedback, revise once each, and pass through Counterintelligence red-team review before a Decision Auditor challenges the proposal and a deterministic software policy matrix — not free-form prose — decides which actions are actually eligible. A human still authorizes every outcome. The system ingests PDF scenarios with page-level citations, and every one of the 16 pipeline stages is preserved in a persistent Postgres mission ledger for later inspection. The Cold War setting is the user-facing theme; the reusable part is the architecture underneath.",
-    github: "https://github.com/travtrego/Cold-War-decided-",
     demo: "https://cold-war-decided.vercel.app",
     caseStudy: "/agentic-pipelines/cold-war-decided",
     tags: [
