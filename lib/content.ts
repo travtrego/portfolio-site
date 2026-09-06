@@ -224,9 +224,49 @@ export const agenticProjects: Project[] = [
       "PDF ingestion (unpdf)",
       "SHA-256 fingerprinting",
     ],
+    images: [
+      {
+        src: "/projects/cold-war-simulator/command-center.png",
+        alt: "Cold War: Decided command center showing the active scenario and decision-readiness panel",
+      },
+      {
+        src: "/projects/cold-war-simulator/agent-pipeline.png",
+        alt: "Cold War: Decided pipeline view showing four evidence-siloed specialist agents",
+      },
+    ],
     nextSteps: [
       "Having built a rule-based evaluator to score evidence discipline and independence, a future project could pit it against an LLM-as-judge grader on the same transcripts and see where they disagree",
       "Now that every mission stage lands in an immutable ledger, a future project could add a side-by-side replay view to diff two runs of the same scenario",
+    ],
+  },
+  {
+    title: "Blackstone Carry Review",
+    summary:
+      "A tested two-branch learning project that pairs a six-agent disclosure-review chain with a deterministic carried-interest calculator.",
+    description:
+      "Branch 1 passes primary-source excerpts through retrieval, mechanics, blind compression, skepticism, synthesis, and judging to show what evidence survives each handoff. Branch 2 keeps the waterfall math in normal JavaScript and uses Claude only to explain the precomputed result. The calculator uses dated, unverified source-table inputs and teaching assumptions — not Blackstone's actual fund terms or carry payable. Built as a local experiment in multi-agent architecture, evaluation-first testing, and honest limitation handling, not a production financial tool.",
+    github: "https://github.com/travtrego/Blackstone-Carry-Project",
+    tags: [
+      "Anthropic Claude API",
+      "Six-agent pipeline",
+      "Deterministic JavaScript",
+      "Evaluation-first testing",
+      "Primary-source review",
+      "Vinext + React",
+    ],
+    images: [
+      {
+        src: "/projects/blackstone-carry/disclosure-review.png",
+        alt: "Blackstone Carry Review six-stage disclosure pipeline",
+      },
+      {
+        src: "/projects/blackstone-carry/carry-calculator.png",
+        alt: "Blackstone Carry Review deterministic carried-interest calculator",
+      },
+    ],
+    nextSteps: [
+      "Replace the inherited June 2026 fund table with versioned, independently verified source records and explicit provenance",
+      "Compare repeated pipeline runs to measure which handoffs most often lose or distort facts",
     ],
   },
 ];
