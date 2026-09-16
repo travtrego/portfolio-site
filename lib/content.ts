@@ -372,12 +372,10 @@ export const learningPlan: LearningGroup[] = [
     note: "Free, fast, and closest to what I'm already building — these feed the projects on this site directly. Anthropic's courses now live at Claude Academy, which folded in the old Anthropic Academy catalog.",
     courses: [
       "Claude Academy — Building with the Claude API",
-      "Claude Academy — Claude Code 101",
       "Claude Academy — Claude Code in Action",
       "Claude Academy — Introduction to Model Context Protocol",
       "Claude Academy — Model Context Protocol: Advanced Topics",
       "Claude Academy — Introduction to Agent Skills",
-      "Claude Academy — Introduction to Subagents",
       "OpenAI Academy — AI Foundations",
       "OpenAI Academy — Agents and Workflows",
       "Hugging Face — LLM Course",
