@@ -1,7 +1,9 @@
-import { learningPlan } from "@/lib/content";
+import { courseDone, courseName, learningPlan } from "@/lib/content";
 
 export default function LearningPlan({ accent }: { accent: string }) {
-  const total = learningPlan.reduce((sum, group) => sum + group.courses.length, 0);
+  const all = learningPlan.flatMap((group) => group.courses);
+  const total = all.length;
+  const doneCount = all.filter(courseDone).length;
 
   return (
     <section className="mt-14">
@@ -10,7 +12,8 @@ export default function LearningPlan({ accent }: { accent: string }) {
       </h2>
       <p className="mt-2 text-[var(--muted)]">
         {total} courses and certifications I plan to work through, in the order I intend to take them —
-        fundamentals first, then hands-on building, then depth. Updated as I finish them.
+        fundamentals first, then hands-on building, then depth.{" "}
+        {doneCount > 0 ? `${doneCount} done so far.` : "Updated as I finish them."}
       </p>
 
       <ol className="mt-6 grid gap-4">
@@ -29,10 +32,27 @@ export default function LearningPlan({ accent }: { accent: string }) {
               <h3 className="text-base font-bold">{group.group}</h3>
             </div>
             <p className="mt-2 text-sm text-[var(--muted)]">{group.note}</p>
-            <ul className="mt-3 list-disc space-y-1 pl-5 text-sm">
-              {group.courses.map((course) => (
-                <li key={course}>{course}</li>
-              ))}
+            <ul className="mt-3 space-y-1 text-sm">
+              {group.courses.map((course) => {
+                const name = courseName(course);
+                const done = courseDone(course);
+
+                return (
+                  <li key={name} className="flex items-baseline gap-2">
+                    <span
+                      aria-hidden
+                      className="shrink-0 text-xs"
+                      style={done ? { color: accent } : undefined}
+                    >
+                      {done ? "✓" : "•"}
+                    </span>
+                    <span className={done ? "font-medium" : undefined}>
+                      {name}
+                      {done ? <span className="sr-only"> (completed)</span> : null}
+                    </span>
+                  </li>
+                );
+              })}
             </ul>
           </li>
         ))}
