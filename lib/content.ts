@@ -333,11 +333,24 @@ export const courseworkProjects: Project[] = [
   },
 ];
 
+/**
+ * A course is a bare string until it's finished, at which point it becomes
+ * `{ name, done: true }`. Keeping the string form means marking something
+ * complete is a local edit to that one line, not a rewrite of the whole list.
+ */
+export type Course = string | { name: string; done?: boolean };
+
 export type LearningGroup = {
   group: string;
   note: string;
-  courses: string[];
+  courses: Course[];
 };
+
+export const courseName = (course: Course) =>
+  typeof course === "string" ? course : course.name;
+
+export const courseDone = (course: Course) =>
+  typeof course !== "string" && course.done === true;
 
 export const learningPlan: LearningGroup[] = [
   {
