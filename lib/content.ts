@@ -319,6 +319,20 @@ export const comingSoonProjects: Project[] = [
 // not flagship work. Standout entries get promoted into one of the real categories above.
 export const courseworkProjects: Project[] = [
   {
+    title: "Monster Slayer",
+    summary:
+      "A turn-based battle game built from a plain-English brief, then expanded with difficulty levels and a leaderboard for the fastest wins.",
+    description:
+      "Started as a Python game with a Tkinter window: choose a username, fight a monster using regular attacks, strong attacks, or healing, and try to win before your health reaches zero. Easy, Normal, and Hard change the recovery time between special actions. Each username keeps its best winning round count, saved in a text file. The live demo brings the same rules to the browser, with scores stored on the device and a text-file export. The original commented Python game is available to download from the demo.",
+    demo: "/coursework/monster-slayer/index.html",
+    github: "https://github.com/travtrego/portfolio-site/tree/main/public/coursework/monster-slayer",
+    tags: ["Python", "Tkinter", "JavaScript", "Game state", "File persistence", "Prompt engineering"],
+    images: [
+      { src: "/projects/monster-slayer/battle.jpg", alt: "Monster Slayer battle with health bars, attack choices, cooldowns, and a turn-by-turn log" },
+      { src: "/projects/monster-slayer/difficulty.jpg", alt: "Monster Slayer difficulty selection with Easy, Normal, and Hard attack and healing cooldowns" },
+    ],
+  },
+  {
     title: "Resume & Story Site",
     summary:
       "The first project from Udemy's \"ChatGPT and Generative AI\" — built to practice prompt engineering, not just generate throwaway output. A resume page and a separate narrative \"My Story\" page.",

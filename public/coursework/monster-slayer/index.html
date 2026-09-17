@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Monster Slayer — Walrus Productions</title>
+  <meta name="description" content="A turn-based monster battle with three difficulties, attack and healing cooldowns, and personal high scores. Play the coursework demo or download the original Python game.">
+  <link rel="stylesheet" href="styles.css">
+  <script type="module" src="app.mjs"></script>
+</head>
+<body>
+  <nav class="topbar" aria-label="Project navigation">
+    <a href="/coursework">← Coursework</a>
+    <a href="monster_slayer.py" download>Download Python game ↓</a>
+  </nav>
+  <main>
+    <header class="game-header">
+      <p class="eyebrow">A WALRUS PRODUCTION · COURSEWORK</p>
+      <h1>Monster Slayer<span aria-hidden="true">.</span></h1>
+      <p class="intro">Choose your move. Survive the monster.</p>
+    </header>
+
+    <section id="welcome" class="panel setup" aria-labelledby="welcome-title">
+      <p class="eyebrow">YOUR ADVENTURE STARTS HERE</p>
+      <h2 id="welcome-title">What should we call you?</h2>
+      <form id="username-form">
+        <label for="username">Username</label>
+        <input id="username" name="username" maxlength="20" autocomplete="off" required placeholder="Choose a name" aria-describedby="name-hint name-error">
+        <p class="muted" id="name-hint">1–20 characters. You’ll keep this name between battles.</p>
+        <p id="name-error" class="error" role="alert"></p>
+        <button class="primary" type="submit">Continue →</button>
+      </form>
+    </section>
+
+    <section id="setup" class="panel setup" aria-labelledby="setup-title" hidden>
+      <p class="eyebrow" id="greeting"></p>
+      <h2 id="setup-title" tabindex="-1">Choose your difficulty</h2>
+      <p class="muted">Same monster. Different recovery times.</p>
+      <form id="difficulty-form">
+        <fieldset>
+          <legend class="sr-only">Difficulty</legend>
+          <div class="difficulty-grid">
+            <label class="difficulty"><input type="radio" name="difficulty" value="Easy"><strong>Easy</strong><span>Strong attack: 2 turns</span><span>Heal: 3 turns</span></label>
+            <label class="difficulty"><input type="radio" name="difficulty" value="Normal" checked><strong>Normal</strong><span>Strong attack: 3 turns</span><span>Heal: 5 turns</span></label>
+            <label class="difficulty"><input type="radio" name="difficulty" value="Hard"><strong>Hard</strong><span>Strong attack: 4 turns</span><span>Heal: 7 turns</span></label>
+          </div>
+        </fieldset>
+        <p class="muted rules">Both fighters start with 100 health. Strong Attack and Heal start available; cooldowns count from the turn you use them. Zero health ends the fight.</p>
+        <button class="primary" type="submit">Start Battle →</button>
+      </form>
+    </section>
+
+    <section id="battle" aria-label="Battle" hidden>
+      <div class="battle-top"><p id="round" class="round">Normal · Round 1</p><button id="new-game" class="quiet">New Game</button></div>
+      <div class="fighters">
+        <article class="panel fighter player"><p class="eyebrow">THE SLAYER</p><h2 id="player-name"></h2><p class="health"><span id="player-health">100</span><span class="muted"> / 100</span></p><progress id="player-bar" max="100" value="100" aria-label="Player health"></progress></article>
+        <article class="panel fighter monster"><p class="eyebrow">YOUR OPPONENT</p><h2>The Monster</h2><p class="health"><span id="monster-health">100</span><span class="muted"> / 100</span></p><progress id="monster-bar" max="100" value="100" aria-label="Monster health"></progress></article>
+      </div>
+      <div class="actions" aria-label="Combat actions">
+        <button id="regular" class="action"><strong>Regular Attack</strong><span>6–12 damage</span><small>Available every turn</small></button>
+        <button id="strong" class="action"><strong>Strong Attack</strong><span>15–22 damage</span><small id="strong-wait">Ready</small></button>
+        <button id="heal" class="action"><strong>Heal</strong><span>Restore 12–20 health</span><small id="heal-wait">Ready</small></button>
+      </div>
+      <p id="status" class="status" role="status" aria-live="polite">Choose your action.</p>
+      <section id="result" class="panel result" aria-labelledby="result-title" hidden>
+        <p class="eyebrow" id="result-kicker"></p><h2 id="result-title" tabindex="-1"></h2>
+        <p id="result-detail"></p>
+        <div id="leaderboard" hidden>
+          <div class="score-heading"><h3>High scores</h3><button id="export-scores" class="quiet">Save scores as .txt ↓</button></div>
+          <p class="muted" id="score-note">Fewest rounds wins. Personal bests, across all difficulties, saved in this browser.</p>
+          <div class="table-scroll"><table><caption class="sr-only">Best winning round counts by username</caption><thead><tr><th scope="col">Rank</th><th scope="col">Slayer</th><th scope="col">Rounds</th></tr></thead><tbody id="score-rows"></tbody></table></div>
+        </div>
+        <button id="play-again" class="primary">Choose difficulty & play again →</button>
+      </section>
+      <section class="panel log-panel" aria-labelledby="log-title"><h2 id="log-title">Battle log</h2><ol id="log" aria-label="Battle history"></ol></section>
+    </section>
+    <noscript><p class="panel">This browser demo needs JavaScript. You can also download and run the Python game using the link above.</p></noscript>
+    <footer><p>Originally built in Python with Tkinter. This browser version follows the same battle rules.</p><p>The Python download saves high scores to a text file. Browser scores stay on this device and can be exported above.</p><a href="https://github.com/travtrego/portfolio-site/tree/main/public/coursework/monster-slayer" target="_blank" rel="noopener noreferrer">View project source ↗</a></footer>
+  </main>
+</body>
+</html>
