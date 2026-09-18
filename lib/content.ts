@@ -5,6 +5,8 @@ export type Project = {
   description: string;
   github?: string;
   demo?: string;
+  /** Optional honest label for walkthroughs instead of live applications. */
+  demoLabel?: string;
   /** Link to an in-site case-study page, when one exists for this project. */
   caseStudy?: string;
   tags?: string[];
@@ -318,6 +320,21 @@ export const comingSoonProjects: Project[] = [
 // Not linked from the nav or homepage — assignments and projects from courses and training,
 // not flagship work. Standout entries get promoted into one of the real categories above.
 export const courseworkProjects: Project[] = [
+  {
+    title: "Meetup REST API",
+    summary:
+      "A backend course exercise: build meetup endpoints, add user accounts, then protect changes with JWT authentication.",
+    description:
+      "Built with Node.js and Express during online training with AI assistance. Supports creating, viewing, updating, and deleting meetups, with signup, salted password hashing, and validation before data is saved. Meetup and user records live in JSON files. Tested through Thunder Client to understand request bodies, HTTP status codes, and protected routes. The walkthrough shows the request-and-response flow; the source includes instructions for running the API locally.",
+    demo: "/coursework/meetup-api",
+    demoLabel: "API walkthrough",
+    github: "https://github.com/travtrego/meetup-rest-api",
+    tags: ["Node.js", "Express", "REST API", "JWT", "JSON file storage", "Prompt engineering"],
+    images: [
+      { src: "/projects/meetup-api/create-meetup.png", alt: "Meetup API walkthrough showing an authenticated POST request and its 201 Created response using sample data" },
+      { src: "/projects/meetup-api/protected-route.png", alt: "Meetup API walkthrough showing a request without a token rejected with 401 Unauthorized" },
+    ],
+  },
   {
     title: "Monster Slayer",
     summary:

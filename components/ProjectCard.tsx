@@ -38,7 +38,7 @@ export default function ProjectCard({ project, accent }: { project: Project; acc
               className="rounded-full px-3 py-1 text-xs font-bold shadow-sm transition-transform hover:-translate-y-0.5"
               style={{ backgroundColor: accent, color: "var(--on-accent)" }}
             >
-              Live demo ↗
+              {project.demoLabel ?? "Live demo"} ↗
             </a>
           )}
           {project.github && (
