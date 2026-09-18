@@ -323,9 +323,9 @@ export const courseworkProjects: Project[] = [
   {
     title: "Meetup REST API",
     summary:
-      "A backend course exercise: build meetup endpoints, add user accounts, then protect changes with JWT authentication.",
+      "A backend for a meetup app where anyone can browse events, and signed-in users can add, edit, or remove meetup listings.",
     description:
-      "Built with Node.js and Express during online training with AI assistance. Supports creating, viewing, updating, and deleting meetups, with signup, salted password hashing, and validation before data is saved. Meetup and user records live in JSON files. Tested through Thunder Client to understand request bodies, HTTP status codes, and protected routes. The walkthrough shows the request-and-response flow; the source includes instructions for running the API locally.",
+      "Each meetup has a title, a short summary, and an address. Users register with an email and password, then log in to receive a token that lets them create listings, update individual details, or delete meetups. Viewing the list is open to everyone; any signed-in user can change any meetup. The API rejects incomplete or blank details, stores passwords as salted hashes, and saves accounts and meetups in local JSON files so they remain available after a restart. Built with Node.js and Express during online training with AI assistance and tested in Thunder Client. The walkthrough illustrates these actions, and the source includes instructions for running the API locally.",
     demo: "/coursework/meetup-api",
     demoLabel: "API walkthrough",
     github: "https://github.com/travtrego/meetup-rest-api",
