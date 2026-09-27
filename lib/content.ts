@@ -42,7 +42,6 @@ export const apps: Project[] = [
     description:
       "Installable and works without a connection, running entirely client-side in vanilla HTML/CSS/JavaScript with zero backend or framework. Deployed as a static site on Vercel with custom cache-control headers so service worker and manifest updates roll out immediately instead of going stale. Features an adaptive quiz engine (weak-area drilling, timed mode, custom quizzes, question-of-the-day), a full analytics dashboard (accuracy, streaks, topic breakdowns, weekly heatmap), multi-profile support with JSON backup/restore, and a built-in tutor that explains every question three ways — plain English, step-by-step, and \"why the trap.\"",
     github: "https://github.com/travtrego/-tcp-study-app",
-    demo: "https://tcp-study-app.vercel.app/",
     tags: [
       "Vanilla JavaScript",
       "Progressive Web App (PWA)",
@@ -214,7 +213,6 @@ export const agenticProjects: Project[] = [
       "An evidence-disciplined, production-deployed multi-agent decision simulator — document ingestion, specialist agents, independent review, deterministic guardrails, human authorization, and a persistent audit trail.",
     description:
       "Four evidence-siloed specialists (Submarine, ELINT, Air, HUMINT) analyze the same crisis from isolated dossiers, get targeted Chief feedback, revise once each, and pass through Counterintelligence red-team review before a Decision Auditor challenges the proposal and a deterministic software policy matrix — not free-form prose — decides which actions are actually eligible. A human still authorizes every outcome. The system ingests PDF scenarios with page-level citations, and every one of the 16 pipeline stages is preserved in a persistent Postgres mission ledger for later inspection. The Cold War setting is the user-facing theme; the reusable part is the architecture underneath.",
-    demo: "https://cold-war-decided.vercel.app",
     caseStudy: "/agentic-pipelines/cold-war-decided",
     tags: [
       "OpenAI Responses API",
