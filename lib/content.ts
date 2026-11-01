@@ -405,8 +405,6 @@ export const learningPlan: LearningGroup[] = [
       "Claude Academy — Introduction to Model Context Protocol",
       "Claude Academy — Model Context Protocol: Advanced Topics",
       "Claude Academy — Introduction to Agent Skills",
-      "OpenAI Academy — AI Foundations",
-      "OpenAI Academy — Agents and Workflows",
       "Hugging Face — LLM Course",
       "Hugging Face — AI Agents Course",
       "DeepLearning.AI — Multi AI Agent Systems",
