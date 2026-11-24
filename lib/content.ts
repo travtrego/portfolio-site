@@ -238,9 +238,10 @@ export const videoGames: Project[] = [
   {
     title: "RyuuPlay — Pokémon TCG Trainer",
     summary:
-      "A fork of an open-source Pokémon TCG simulator, built out with modern Standard-format decks and a self-teaching learn mode, to learn the format against a bot.",
+      "Twenty modern Standard decks built end-to-end on an open-source Pokémon TCG engine — several forcing real new rules into the engine itself — plus a learn mode that never shows a player hidden information.",
     description:
-      "RyuuPlay is an MIT-licensed, open-source Pokémon Trading Card Game simulator originally built by keeshii; this fork extends it rather than starting from scratch. Working one deck at a time, 14+ current Standard (Scarlet & Violet / Mega Evolution era) decks have been built end-to-end — each checked against a real decklist, confirmed legal in the modern format, and run through bot-vs-bot mirror games clean before moving to the next. Several decks didn't just need new cards; they needed real engine features that didn't exist yet, like the Mega Evolution Pokémon ex three-prize rule, a Pokémon attacking more than once a turn, and a different bench size per player. On top of the engine, a learn mode teaches the format against the bot: a tutorial game, deck primers, an after-game recap, and inline \"Why?\" notes explaining the bot's own reasoning — all built from one player's point of view only, so nothing exported or displayed ever reveals the opponent's hand, deck order, or Prize cards. Maintained through a nightly scheduled Claude Code run plus manual work, gated by CI on every change.",
+      "RyuuPlay is keeshii's open-source Pokémon TCG simulator; this fork's job is building out current Standard (Scarlet & Violet / Mega Evolution era) support and a self-teaching learn mode on top of it, one deck at a time. Twenty decks are done end-to-end so far, each checked against a real tournament decklist, confirmed legal, and run through bot-vs-bot mirror games clean before starting the next. Several didn't just need new cards: Mega Excadrill ex forced in the Mega Evolution Pokémon ex three-Prize rule, Festival Lead forced in a Pokémon attacking more than once a turn, Basic Box forced in a different bench size per player, and Alakazam / Dusknoir forced in devolving. Those same mirror-game runs are also how bot weaknesses get found, not guessed — N's Zoroark used to always copy the same attack until a seeded trace caught it missing a cleaner kill, while Alakazam still loses close to half its mirrors to its own over-drawing, a known, named weakness rather than a hidden one. A learn mode (tutorial game, deck primers, after-game recap, bot \"Why?\" notes, and a \"Copy game for Claude\" button for asking questions about a live game) teaches the format against the bot under one hard rule: anything shown to a player is built from their point of view only, so deck searches, the starting hand, and hand contents never get an explanation, because that would leak hidden information. Maintained through a nightly scheduled Claude Code run plus manual work, gated by CI, with every change going through a reviewed PR.",
+    caseStudy: "/video-games/ryuuplay",
     github: "https://github.com/travtrego/ryuu-play",
     tags: [
       "TypeScript",
@@ -251,8 +252,8 @@ export const videoGames: Project[] = [
       "Automated nightly development",
     ],
     nextSteps: [
-      "Having hidden opponent information by construction in every learn-mode export, the same pattern could extend to a full replay viewer for reviewing past games",
-      "Now that bot \"Why?\" notes explain individual plays, a future pass could roll a game's per-turn notes into a single post-game strategy summary",
+      "Deck 21 is next on the meta list, but four scheduled runs in a row couldn't start it — the unattended agent has no tool to open a web page and confirm a current decklist",
+      "The bot-weakness list is mostly open, not closed: Alakazam, Dhelmise, and Festival Lead all have a named, measured failure mode and no fix shipped yet",
     ],
   },
   {
