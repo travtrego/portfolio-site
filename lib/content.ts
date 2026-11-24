@@ -62,10 +62,11 @@ export const apps: Project[] = [
   {
     title: "Doorstop",
     summary:
-      "A pre-leave checklist app — swipe through stove, locks, and garage before you walk out the door, with streaks and cross-device sync.",
+      "A pre-leave checklist app — swiped through stove, locks, and garage before walking out the door, with streaks and cross-device sync.",
     description:
-      "Set up a checklist once (stove off, garage closed, doors locked...) and swipe through it every time you leave, like a pre-flight check for the house. Each item is a full-screen card — swipe right to confirm, left to flag it for a second look. Supports multiple profiles (\"Leaving for work\" vs. \"Leaving for vacation\", each its own ordered subset of items), a streak and history log, and accounts with row-level-security-scoped Supabase sync so the same checklists show up on every device. Also includes an honestly-scoped location nudge: while the app is open it can flag that you've left home without checking in today, clearly labeled as foreground-only, since a browser tab can't watch location in the background the way a native app could.",
+      "Set up a checklist once (stove off, garage closed, doors locked...) and swiped through it every time you left, like a pre-flight check for the house. Each item was a full-screen card — swipe right to confirm, left to flag it for a second look. Supported multiple profiles (\"Leaving for work\" vs. \"Leaving for vacation\", each its own ordered subset of items), a streak and history log, and accounts with row-level-security-scoped Supabase sync so the same checklists showed up on every device. Also included an honestly-scoped location nudge: while the app was open it could flag that you'd left home without checking in today, clearly labeled as foreground-only, since a browser tab can't watch location in the background the way a native app could.",
     github: "https://github.com/travtrego/Doorstop",
+    caseStudy: "/helpful-apps/doorstop",
     tags: [
       "React",
       "TypeScript",
@@ -91,11 +92,11 @@ export const funStuff: Project[] = [
   {
     title: "Phillies Prospect Pulse",
     summary:
-      "A self-updating farm-system dashboard with a custom prospect ranking model and a Claude-powered chat assistant that reasons over the live database.",
+      "A self-updating farm-system dashboard with a custom prospect ranking model and a Claude-powered chat assistant that reasoned over the live database.",
     description:
-      "An automated pipeline pulls and reconciles news, stats, promotions, and injuries on a schedule, feeding a ranking model I designed from scratch — weighing scouting, performance, age/level, media sentiment, and risk — that shows exactly what moved each player's rank. \"Prospect Genie\" is a live, Claude-powered chat assistant that reasons over the database to answer natural-language questions about the system — why a player hasn't been promoted, who's trending, head-to-head comparisons. Uses Supabase, and an automated quality pipeline (data audits, ranking backtests against historical outcomes, and typechecking) that runs before every deploy.",
+      "An automated pipeline pulled and reconciled news, stats, promotions, and injuries on a schedule, feeding a ranking model I designed from scratch — weighing scouting, performance, age/level, media sentiment, and risk — that showed exactly what moved each player's rank. \"Prospect Genie\" was a live, Claude-powered chat assistant that reasoned over the database to answer natural-language questions about the system — why a player hadn't been promoted, who was trending, head-to-head comparisons. Used Supabase, and an automated quality pipeline (data audits, ranking backtests against historical outcomes, and typechecking) that ran before every deploy.",
     github: "https://github.com/travtrego/phillies-prospect-pulse",
-    demo: "https://phillies-prospect-pulse-self.vercel.app/",
+    caseStudy: "/passion-projects/phillies-prospect-pulse",
     tags: [
       "Next.js",
       "TypeScript",
@@ -130,6 +131,26 @@ export const funStuff: Project[] = [
     nextSteps: [
       "Having modeled a real phase state machine here, that same pattern is reusable for any workflow-tracking app, not just cultivation",
       "Now that the audit-log pattern (one write, two tables, always in sync) is proven out, future projects can reuse it anywhere mutations need a paper trail",
+    ],
+  },
+  {
+    title: "Walrus Bulk",
+    summary:
+      "A self-coaching weightlifting app — pose tracking measures your lift, and Gemini writes a technique review grounded in real coaching knowledge, not a generic opinion.",
+    description:
+      "Upload a lift video from your phone, and RTMPose tracks body position to compute bar path, timing, foot landing, and lockout. Gemini, called through the Vercel AI Gateway, then writes a technique review grounded in a knowledge base drawn from multiple top coaches, rather than an unmoored LLM opinion. Includes a bar-path overlay, share-straight-from-camera-roll upload, camera-angle guidance so the footage is actually usable, a progress view across sessions, and 6-digit email code sign-in instead of a password. Accuracy is checked against an elite-lifter evaluation set (zero false faults) and calibrated against real training sessions.",
+    demo: "https://walrus-bulk.vercel.app",
+    tags: [
+      "Next.js 16",
+      "Supabase (Auth, DB, Storage)",
+      "Vercel AI Gateway",
+      "Gemini",
+      "Pose estimation (RTMPose)",
+      "Computer vision",
+    ],
+    nextSteps: [
+      "Having calibrated fault detection against an elite-lifter eval set, a future pass could expand that set to cover a wider range of training levels and lift variations",
+      "Now that pose tracking and the coaching knowledge base exist separately, a future version could let the review cite which specific coach's principle flagged each fault",
     ],
   },
 ];
@@ -245,6 +266,7 @@ export const agenticProjects: Project[] = [
     description:
       "Built to test what happens when one AI agent's output becomes the next agent's only source. A retriever pulls SEC and Blackstone material; a mechanics agent explains hurdles, catch-up, and the GP/LP split; a summarizer compresses it; a skeptic challenges what survived; and a final judge grades the memo against the original source. A separate branch handles the numbers differently: normal JavaScript calculates a hypothetical fund waterfall, then Claude explains the already-computed result in plain English instead of doing the math itself. Repeated testing caught both one-off agent drift and a real timing bug in the calculator. The underlying fund table is a dated teaching dataset, so the tool is intentionally presented as a learning experiment — not an estimate of Blackstone's actual carry.",
     github: "https://github.com/travtrego/Blackstone-Carry-Project",
+    caseStudy: "/agentic-pipelines/blackstone-carry-review",
     tags: [
       "Anthropic Claude API",
       "Six-agent pipeline",
