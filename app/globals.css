@@ -12,6 +12,7 @@
   --accent-comingsoon: #94a3b8;
   --accent-coursework: #2dd4bf;
   --accent-philosophy: #f87171;
+  --accent-games: #f472b6;
   --card: #12151c;
   --border: #232733;
   /* text color to use on top of a solid accent-colored fill (button/chip/pill) */
@@ -32,6 +33,7 @@
     --accent-comingsoon: #475569;
     --accent-coursework: #0f766e;
     --accent-philosophy: #b91c1c;
+    --accent-games: #be185d;
     --card: #fffefb;
     --border: #e3e6ec;
     --on-accent: #ffffff;

@@ -7,6 +7,7 @@ const links = [
   { href: "/", label: "Home", emoji: "👋", accent: "var(--accent)" },
   { href: "/agentic-pipelines", label: "Agentic Pipelines", emoji: "🤖", accent: "var(--accent-productivity)" },
   { href: "/passion-projects", label: "Passion Projects", emoji: "🎉", accent: "var(--accent-fun)" },
+  { href: "/video-games", label: "Video Games", emoji: "🎮", accent: "var(--accent-games)" },
   { href: "/data-science", label: "Data Science", emoji: "📊", accent: "var(--accent-data)" },
   { href: "/helpful-apps", label: "Apps", emoji: "💻", accent: "var(--accent-apps)" },
   { href: "/coming-soon", label: "Coming Soon", emoji: "🔜", accent: "var(--accent-comingsoon)" },

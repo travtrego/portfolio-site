@@ -227,6 +227,45 @@ export const dataProjects: Project[] = [
   },
 ];
 
+export const videoGames: Project[] = [
+  {
+    title: "RyuuPlay — Pokémon TCG Trainer",
+    summary:
+      "A fork of an open-source Pokémon TCG simulator, built out with modern Standard-format decks and a self-teaching learn mode, to learn the format against a bot.",
+    description:
+      "RyuuPlay is an MIT-licensed, open-source Pokémon Trading Card Game simulator originally built by keeshii; this fork extends it rather than starting from scratch. Working one deck at a time, 14+ current Standard (Scarlet & Violet / Mega Evolution era) decks have been built end-to-end — each checked against a real decklist, confirmed legal in the modern format, and run through bot-vs-bot mirror games clean before moving to the next. Several decks didn't just need new cards; they needed real engine features that didn't exist yet, like the Mega Evolution Pokémon ex three-prize rule, a Pokémon attacking more than once a turn, and a different bench size per player. On top of the engine, a learn mode teaches the format against the bot: a tutorial game, deck primers, an after-game recap, and inline \"Why?\" notes explaining the bot's own reasoning — all built from one player's point of view only, so nothing exported or displayed ever reveals the opponent's hand, deck order, or Prize cards. Maintained through a nightly scheduled Claude Code run plus manual work, gated by CI on every change.",
+    github: "https://github.com/travtrego/ryuu-play",
+    tags: [
+      "TypeScript",
+      "Angular",
+      "Pokémon TCG engine",
+      "Open-source fork",
+      "Bot reasoning / explainability",
+      "Automated nightly development",
+    ],
+    nextSteps: [
+      "Having hidden opponent information by construction in every learn-mode export, the same pattern could extend to a full replay viewer for reviewing past games",
+      "Now that bot \"Why?\" notes explain individual plays, a future pass could roll a game's per-turn notes into a single post-game strategy summary",
+    ],
+  },
+  {
+    title: "Star Wars: The Wound in the Force",
+    summary:
+      "A from-scratch Unreal Engine 5 open-world RPG — planets, ship flight and combat, a skill-tree progression system, and 7-state enemy ship AI, all in C++ before a single frame has been compiled.",
+    description:
+      "A fan-made open-world Star Wars RPG for Unreal Engine 5.3, mixing Skyrim's classless character building, Starfield's planet-hopping, Far Cry's tactical combat, and Battlefront's Star Wars feel. The current milestone is a C++ code foundation, not a playable build: planet data and travel-by-ID through the Asset Manager, a third-person on-foot character built on Unreal's Gameplay Ability System (GAS) with HP/Force/Stamina/XP/Credits/Alignment, 9 races by 7 origins by 12 background skills at character creation, manual 6DOF ship flight with momentum in space and drag in atmosphere, ship weapons and projectiles defined as data rather than hardcoded per type, 7-state enemy ship AI (patrol through flank/evade) with lead-targeting, and a faction-reputation subsystem. No art, levels, or Blueprints exist yet, and the code hasn't been compiled inside Unreal itself — it currently only passes the repository's own static checks.",
+    tags: [
+      "Unreal Engine 5",
+      "C++",
+      "Gameplay Ability System (GAS)",
+      "Open-world RPG",
+      "Game AI",
+      "Data-driven design",
+    ],
+    comingSoon: true,
+  },
+];
+
 export const agenticProjects: Project[] = [
   {
     title: "Cold War: Decided",
