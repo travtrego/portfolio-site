@@ -36,6 +36,33 @@ export const site = {
 
 export const apps: Project[] = [
   {
+    title: "Walrus Bulk",
+    summary:
+      "A live, phone-first self-coaching app for Olympic weightlifting: on-device pose tracking, a versioned coaching playbook, and structured AI reviews calibrated against real training sessions.",
+    description:
+      "A self-coached lifter can film every attempt, but a video alone isn't a coach — replay is subjective, friends are polite, and most AI video tools invent faults or ignore the camera angle. Upload a snatch, clean, jerk, squat, or variant, and on-device pose tracking (RTMDet-nano + RTMPose-m, running in the browser over WebGPU with a WASM fallback) finds the lift window, times the phases, and measures what the camera angle can actually support — joint angles and bar travel are only trusted from a true side view, and a 45° or front angle gets its own, narrower set of claims. A versioned coaching playbook and knowledge base ground the review itself: faults use a fixed 63-label vocabulary so they can be tracked over time, each comes with what happened, why, how to fix it, a cue, a timestamp, and a confidence score, and calls below 0.65 confidence or taken from the wrong angle are marked possible rather than definite. The lifter can agree, reject, or edit every call; edits calibrate later reviews as prompt context, never as model fine-tuning, and a public elite-lifter negative set has held at zero invented faults through the last two playbook revisions. Two real tracking bugs were found and fixed this way: a 3.5-second window tail that cut off a held catch and misread extension height as 165–205% of standing height instead of ~95–102%, and a front-view elbow-angle threshold that called a locked-out arm as a late lockout because a true lockout only reads about 158–167° head-on.",
+    caseStudy: "/helpful-apps/walrus-bulk",
+    tags: [
+      "Next.js 16",
+      "React 19",
+      "TypeScript",
+      "Supabase (Auth, Postgres, Storage)",
+      "Vercel AI Gateway",
+      "Gemini",
+      "On-device pose estimation (RTMDet / RTMPose, WebGPU)",
+      "Computer vision",
+    ],
+    images: [
+      { src: "/projects/walrus-bulk/overlay.png", alt: "Clip page with synced skeleton and bar-path overlays over a snatch attempt" },
+      { src: "/projects/walrus-bulk/review.png", alt: "A \"Caught high, rode down\" fault card with a measured sub-cause and a coaching fix" },
+      { src: "/projects/walrus-bulk/progress.png", alt: "Patterns tab showing make rate and fault trends across sessions, labeled as example data" },
+    ],
+    nextSteps: [
+      "Hang- and block-aware event detection, and measuring the jerk half of a clean & jerk, are still on the roadmap",
+      "The 45° calibration still misses some clearly wide landings the measurements themselves show, so first-pull bar-to-body distance and knee clearance from that angle remain unsettled",
+    ],
+  },
+  {
     title: "CPA Study App",
     summary:
       "An offline-first study app for CPA exam prep — adaptive quizzes, a full analytics dashboard, and a built-in tutor, with no backend at all.",
@@ -84,26 +111,6 @@ export const apps: Project[] = [
     nextSteps: [
       "Having built a foreground-only geofence nudge here, a future project could explore a native wrapper (Capacitor, React Native) to get real background location",
       "Now that Supabase realtime sync (postgres_changes) works end to end, a future project could reuse the same pattern for any multi-device app that needs live sync",
-    ],
-  },
-  {
-    title: "Walrus Bulk",
-    summary:
-      "A self-coaching weightlifting app — pose tracking measures your lift, and Gemini writes a technique review grounded in real coaching knowledge, not a generic opinion.",
-    description:
-      "Upload a lift video from your phone, and RTMPose tracks body position to compute bar path, timing, foot landing, and lockout. Gemini, called through the Vercel AI Gateway, then writes a technique review grounded in a knowledge base drawn from multiple top coaches, rather than an unmoored LLM opinion. Includes a bar-path overlay, share-straight-from-camera-roll upload, camera-angle guidance so the footage is actually usable, a progress view across sessions, and 6-digit email code sign-in instead of a password. Accuracy is checked against an elite-lifter evaluation set (zero false faults) and calibrated against real training sessions.",
-    demo: "https://walrus-bulk.vercel.app",
-    tags: [
-      "Next.js 16",
-      "Supabase (Auth, DB, Storage)",
-      "Vercel AI Gateway",
-      "Gemini",
-      "Pose estimation (RTMPose)",
-      "Computer vision",
-    ],
-    nextSteps: [
-      "Having calibrated fault detection against an elite-lifter eval set, a future pass could expand that set to cover a wider range of training levels and lift variations",
-      "Now that pose tracking and the coaching knowledge base exist separately, a future version could let the review cite which specific coach's principle flagged each fault",
     ],
   },
 ];
