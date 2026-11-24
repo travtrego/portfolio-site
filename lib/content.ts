@@ -86,6 +86,26 @@ export const apps: Project[] = [
       "Now that Supabase realtime sync (postgres_changes) works end to end, a future project could reuse the same pattern for any multi-device app that needs live sync",
     ],
   },
+  {
+    title: "Walrus Bulk",
+    summary:
+      "A self-coaching weightlifting app — pose tracking measures your lift, and Gemini writes a technique review grounded in real coaching knowledge, not a generic opinion.",
+    description:
+      "Upload a lift video from your phone, and RTMPose tracks body position to compute bar path, timing, foot landing, and lockout. Gemini, called through the Vercel AI Gateway, then writes a technique review grounded in a knowledge base drawn from multiple top coaches, rather than an unmoored LLM opinion. Includes a bar-path overlay, share-straight-from-camera-roll upload, camera-angle guidance so the footage is actually usable, a progress view across sessions, and 6-digit email code sign-in instead of a password. Accuracy is checked against an elite-lifter evaluation set (zero false faults) and calibrated against real training sessions.",
+    demo: "https://walrus-bulk.vercel.app",
+    tags: [
+      "Next.js 16",
+      "Supabase (Auth, DB, Storage)",
+      "Vercel AI Gateway",
+      "Gemini",
+      "Pose estimation (RTMPose)",
+      "Computer vision",
+    ],
+    nextSteps: [
+      "Having calibrated fault detection against an elite-lifter eval set, a future pass could expand that set to cover a wider range of training levels and lift variations",
+      "Now that pose tracking and the coaching knowledge base exist separately, a future version could let the review cite which specific coach's principle flagged each fault",
+    ],
+  },
 ];
 
 export const funStuff: Project[] = [
@@ -131,26 +151,6 @@ export const funStuff: Project[] = [
     nextSteps: [
       "Having modeled a real phase state machine here, that same pattern is reusable for any workflow-tracking app, not just cultivation",
       "Now that the audit-log pattern (one write, two tables, always in sync) is proven out, future projects can reuse it anywhere mutations need a paper trail",
-    ],
-  },
-  {
-    title: "Walrus Bulk",
-    summary:
-      "A self-coaching weightlifting app — pose tracking measures your lift, and Gemini writes a technique review grounded in real coaching knowledge, not a generic opinion.",
-    description:
-      "Upload a lift video from your phone, and RTMPose tracks body position to compute bar path, timing, foot landing, and lockout. Gemini, called through the Vercel AI Gateway, then writes a technique review grounded in a knowledge base drawn from multiple top coaches, rather than an unmoored LLM opinion. Includes a bar-path overlay, share-straight-from-camera-roll upload, camera-angle guidance so the footage is actually usable, a progress view across sessions, and 6-digit email code sign-in instead of a password. Accuracy is checked against an elite-lifter evaluation set (zero false faults) and calibrated against real training sessions.",
-    demo: "https://walrus-bulk.vercel.app",
-    tags: [
-      "Next.js 16",
-      "Supabase (Auth, DB, Storage)",
-      "Vercel AI Gateway",
-      "Gemini",
-      "Pose estimation (RTMPose)",
-      "Computer vision",
-    ],
-    nextSteps: [
-      "Having calibrated fault detection against an elite-lifter eval set, a future pass could expand that set to cover a wider range of training levels and lift variations",
-      "Now that pose tracking and the coaching knowledge base exist separately, a future version could let the review cite which specific coach's principle flagged each fault",
     ],
   },
 ];
